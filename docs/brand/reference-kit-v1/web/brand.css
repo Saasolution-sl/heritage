@@ -1,0 +1,12 @@
+:root {
+  --ec-obsidian: #0B0907;
+  --ec-imperial-gold: #D6AD55;
+  --ec-antique-gold: #9A7434;
+  --ec-tobacco-brown: #5B321E;
+  --ec-warm-ivory: #F3E7CC;
+  --ec-font-display: 'Cormorant Garamond', Georgia, serif;
+  --ec-font-body: Inter, Manrope, sans-serif;
+}
+body { background: var(--ec-obsidian); color: var(--ec-warm-ivory); font-family: var(--ec-font-body); }
+h1, h2, h3, .ec-display { font-family: var(--ec-font-display); color: var(--ec-imperial-gold); }
+.ec-rule { border-color: var(--ec-antique-gold); }

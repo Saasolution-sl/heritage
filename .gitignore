@@ -1,0 +1,42 @@
+# dependencies
+node_modules/
+.pnp*
+
+# build output
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# test output
+test-results/
+playwright-report/
+coverage/
+
+# caches and OS files
+.cache/
+.eslintcache
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+npm-debug.log*
+
+# environment and secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+credentials*.json
+secrets/
+
+# editors
+.vscode/*
+!.vscode/extensions.json
+.idea/

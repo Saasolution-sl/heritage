@@ -1,0 +1,21 @@
+{
+  "color": {
+    "obsidianBlack": "#0B0907",
+    "imperialGold": "#D6AD55",
+    "antiqueGold": "#9A7434",
+    "tobaccoBrown": "#5B321E",
+    "warmIvory": "#F3E7CC"
+  },
+  "font": {
+    "display": "Cormorant Garamond, Georgia, serif",
+    "body": "Inter, Manrope, sans-serif"
+  },
+  "radius": {
+    "small": "2px",
+    "medium": "6px"
+  },
+  "spacing": {
+    "unit": "4px",
+    "section": "96px"
+  }
+}

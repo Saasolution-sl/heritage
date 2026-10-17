@@ -1,0 +1,318 @@
+{
+  "$comment": "Single source of truth for the twelve collections. Read by the website (src/lib/catalog.ts) and the brand asset generator (scripts/brand). All product specifications are CONCEPT proposals from the brand brief until the manufacturer confirms them: keep specStatus 'concept' and leave blend, origin and manufacturer null until verified.",
+  "collections": [
+    {
+      "slug": "caesar",
+      "number": 1,
+      "numeral": "I",
+      "name": "Caesar",
+      "empire": "Roman Empire",
+      "period": "27 BC – AD 476 in the West",
+      "inspiration": "The order, architecture and laurel-crowned authority of imperial Rome.",
+      "story": "Rome measured its power in roads, aqueducts and law as much as in conquest. The laurel wreath, awarded to victorious generals and later worn by emperors, became the shorthand for that authority. The Caesar collection borrows Rome's discipline: a crimson field, a closed laurel and the four letters that stood on every standard — SPQR, the Senate and People of Rome.",
+      "accent": { "name": "Roman Crimson", "hex": "#7E1D33", "on": "#F3E7CC" },
+      "emblem": { "motif": "Laurel wreath enclosing SPQR", "note": "SPQR was the formal signature of the Roman state; used here as a historical inscription, not a modern civic mark." },
+      "products": [
+        {
+          "slug": "caesar-toro",
+          "name": "Caesar Toro",
+          "status": "concept",
+          "summary": "A classic toro proposed as the anchor of the Roman collection.",
+          "description": "The Caesar Toro is the brand's proposed everyday imperial format: a straight parejo with enough girth for a long, even draw. Band, box and format are design concepts; the blend will be defined with the manufacturer.",
+          "vitola": { "name": "Toro", "shape": "parejo", "lengthMm": 152, "ringGauge": 52 },
+          "strength": "Medium–Full",
+          "flavorDirection": ["Cocoa", "Cedar", "Black pepper"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["napoleon-robusto", "imperator-double-corona", "charlemagne-lancero"]
+        }
+      ]
+    },
+    {
+      "slug": "pharaoh",
+      "number": 2,
+      "numeral": "II",
+      "name": "Pharaoh",
+      "empire": "Ancient Egypt",
+      "period": "c. 3100 – 30 BC",
+      "inspiration": "Geometry, permanence and the lapis-blue luxury of the Nile kingdoms.",
+      "story": "For three thousand years Egypt's rulers built to outlast them. Pyramids aligned to the compass, temples set against the sun, lapis lazuli carried from distant mountains to colour royal ornament. The Pharaoh collection takes its form from that geometry — a pyramide vitola, a lapis field and a single disc rising over a stepped monument.",
+      "accent": { "name": "Lapis Blue", "hex": "#1D4F9C", "on": "#F3E7CC" },
+      "emblem": { "motif": "Pyramid beneath a rising disc", "note": "Architectural motif; avoids deity imagery and hieroglyphic text." },
+      "products": [
+        {
+          "slug": "pharaoh-pyramide",
+          "name": "Pharaoh Pyramide",
+          "status": "concept",
+          "summary": "A tapered pyramide that mirrors the collection's geometry.",
+          "description": "A figurado whose head narrows to a point, chosen because the shape itself tells the story. The pointed head concentrates the draw; the format is a proposal pending manufacturer review.",
+          "vitola": { "name": "Pyramide", "shape": "torpedo", "lengthMm": 156, "ringGauge": 52 },
+          "strength": "Medium",
+          "flavorDirection": ["Honey", "Toasted almond", "Dried fig"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["cyrus-robusto-extra", "inca-perfecto", "saadian-belicoso"]
+        }
+      ]
+    },
+    {
+      "slug": "tsar",
+      "number": 3,
+      "numeral": "III",
+      "name": "Tsar",
+      "empire": "Russian Empire",
+      "period": "1721 – 1917",
+      "inspiration": "Winter palaces, court ceremony and the jewelled crowns of St Petersburg.",
+      "story": "From Peter the Great's new capital on the Neva to the court ceremonies of the nineteenth century, the Russian Empire staged its power with extraordinary craft — goldsmiths, enamellers and jewellers working at the scale of an empire. The Tsar collection is the long, slow format of the range: an oxblood field and a domed crown drawn in gold.",
+      "accent": { "name": "Oxblood", "hex": "#6A2119", "on": "#F3E7CC" },
+      "emblem": { "motif": "Domed imperial crown", "note": "A generic domed-crown silhouette; deliberately avoids state heraldry such as the double-headed eagle." },
+      "products": [
+        {
+          "slug": "tsar-churchill",
+          "name": "Tsar Churchill",
+          "status": "concept",
+          "summary": "A long, stately churchill proposed for unhurried evenings.",
+          "description": "A seven-inch churchill built for a long smoke. The proportions are the brief's proposal; the blend, origin and construction are to be confirmed.",
+          "vitola": { "name": "Churchill", "shape": "parejo", "lengthMm": 178, "ringGauge": 48 },
+          "strength": "Full",
+          "flavorDirection": ["Espresso", "Leather", "Dark spice"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["genghis-gordo", "imperator-double-corona", "caesar-toro"]
+        }
+      ]
+    },
+    {
+      "slug": "suleiman",
+      "number": 4,
+      "numeral": "IV",
+      "name": "Suleiman",
+      "empire": "Ottoman Empire",
+      "period": "Reign of Suleiman I, 1520 – 1566",
+      "inspiration": "The tulip, the tile and the refinement of the Ottoman court at its height.",
+      "story": "Suleiman I's reign is remembered as a high point of Ottoman law, architecture and the arts — the age of the architect Sinan and of the tulip and carnation designs that spread across Iznik tiles, textiles and manuscripts. The Suleiman collection takes the tulip as its sign, drawn in gold on a deep Ottoman green.",
+      "accent": { "name": "Ottoman Green", "hex": "#24583A", "on": "#F3E7CC" },
+      "emblem": { "motif": "Stylised tulip", "note": "The tulip is a decorative Ottoman motif; religious symbols and the imperial tughra are deliberately not used." },
+      "products": [
+        {
+          "slug": "suleiman-corona-gorda",
+          "name": "Suleiman Corona Gorda",
+          "status": "concept",
+          "summary": "A balanced corona gorda with refined proportions.",
+          "description": "A slightly fuller corona, proposed for balance rather than power. Format and tasting direction are concept proposals awaiting a manufacturer's blend.",
+          "vitola": { "name": "Corona Gorda", "shape": "parejo", "lengthMm": 143, "ringGauge": 46 },
+          "strength": "Medium",
+          "flavorDirection": ["Cedar", "Cardamom", "Toasted bread"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["saadian-belicoso", "akbar-lonsdale", "cyrus-robusto-extra"]
+        }
+      ]
+    },
+    {
+      "slug": "akbar",
+      "number": 5,
+      "numeral": "V",
+      "name": "Akbar",
+      "empire": "Mughal Empire",
+      "period": "Reign of Akbar, 1556 – 1605",
+      "inspiration": "Cusped arches, carved stone screens and the jade and ivory of Mughal craft.",
+      "story": "Akbar built an empire across northern India and a court known for its patronage of painting, architecture and debate. Mughal builders framed their spaces with cusped arches and pierced stone screens; their craftsmen carved jade with remarkable delicacy. The Akbar collection is the lightest of the range, framed by a single arch in pale jade and gold.",
+      "accent": { "name": "Mughal Jade", "hex": "#5E8A6A", "on": "#0B0907" },
+      "emblem": { "motif": "Cusped Mughal arch", "note": "Architectural motif drawn from Mughal arches and jali screens." },
+      "products": [
+        {
+          "slug": "akbar-lonsdale",
+          "name": "Akbar Lonsdale",
+          "status": "concept",
+          "summary": "A slender lonsdale proposed as the collection's most delicate format.",
+          "description": "A long, slim lonsdale for a lighter, aromatic smoke. All specifications shown are concepts for development with the manufacturer.",
+          "vitola": { "name": "Lonsdale", "shape": "parejo", "lengthMm": 165, "ringGauge": 42 },
+          "strength": "Mild–Medium",
+          "flavorDirection": ["Cream", "White pepper", "Sandalwood"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["charlemagne-lancero", "suleiman-corona-gorda", "saadian-belicoso"]
+        }
+      ]
+    },
+    {
+      "slug": "napoleon",
+      "number": 6,
+      "numeral": "VI",
+      "name": "Napoleon",
+      "empire": "First French Empire",
+      "period": "1804 – 1815",
+      "inspiration": "Neoclassical order, imperial blue and the golden bee of the First Empire.",
+      "story": "When Napoleon crowned himself emperor in 1804 he chose the bee as an emblem, linking his new dynasty to the ancient Frankish king Childeric, in whose tomb golden bee-shaped ornaments had been found. The Napoleon collection carries that bee in gold on a deep imperial blue — compact, decisive and precise.",
+      "accent": { "name": "Imperial Navy", "hex": "#1A3A63", "on": "#F3E7CC" },
+      "emblem": { "motif": "The imperial bee", "note": "The Napoleonic bee is a historical emblem; no modern state insignia are used." },
+      "products": [
+        {
+          "slug": "napoleon-robusto",
+          "name": "Napoleon Robusto",
+          "status": "concept",
+          "summary": "A short, concentrated robusto.",
+          "description": "A robusto delivers a full-bodied experience in under an hour. The format suits the collection's character; blend details will follow manufacturer development.",
+          "vitola": { "name": "Robusto", "shape": "parejo", "lengthMm": 127, "ringGauge": 50 },
+          "strength": "Medium–Full",
+          "flavorDirection": ["Dark chocolate", "Roasted coffee", "Orange peel"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["caesar-toro", "charlemagne-lancero", "cyrus-robusto-extra"]
+        }
+      ]
+    },
+    {
+      "slug": "cyrus",
+      "number": 7,
+      "numeral": "VII",
+      "name": "Cyrus",
+      "empire": "Achaemenid Persian Empire",
+      "period": "Founded by Cyrus the Great, c. 550 BC",
+      "inspiration": "Persepolis rosettes, Persian turquoise and an empire of many peoples.",
+      "story": "Cyrus the Great founded an empire that stretched from the Aegean to Central Asia, governed through provinces that kept their own languages and customs. The palaces at Persepolis, built by his successors, are bordered with carved rosettes. The Cyrus collection takes a twelve-petal rosette — one petal for each collection — on a deep Persian teal.",
+      "accent": { "name": "Persian Teal", "hex": "#0C5E67", "on": "#F3E7CC" },
+      "emblem": { "motif": "Twelve-petal Persepolis rosette", "note": "Rosette ornament from Achaemenid relief carving; the Faravahar and other religious symbols are deliberately not used." },
+      "products": [
+        {
+          "slug": "cyrus-robusto-extra",
+          "name": "Cyrus Robusto Extra",
+          "status": "concept",
+          "summary": "A longer robusto with generous proportions.",
+          "description": "A robusto extended by half an inch for a longer progression. Proportions are concept proposals pending manufacturer confirmation.",
+          "vitola": { "name": "Robusto Extra", "shape": "parejo", "lengthMm": 140, "ringGauge": 52 },
+          "strength": "Medium",
+          "flavorDirection": ["Saffron", "Walnut", "Cedar"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["pharaoh-pyramide", "suleiman-corona-gorda", "genghis-gordo"]
+        }
+      ]
+    },
+    {
+      "slug": "genghis",
+      "number": 8,
+      "numeral": "VIII",
+      "name": "Genghis",
+      "empire": "Mongol Empire",
+      "period": "Founded 1206",
+      "inspiration": "The steppe, the composite bow and the largest contiguous land empire in history.",
+      "story": "United under Genghis Khan in 1206, the Mongols built the largest contiguous land empire in history, moving across the steppe with mounted archers whose composite bows were masterpieces of horn, wood and sinew. The Genghis collection is the boldest format of the range — a wide gordo with a drawn bow on bronze.",
+      "accent": { "name": "Steppe Bronze", "hex": "#A66B32", "on": "#0B0907" },
+      "emblem": { "motif": "Drawn composite bow", "note": "Material-culture motif; the Soyombo and other national or religious symbols are not used." },
+      "products": [
+        {
+          "slug": "genghis-gordo",
+          "name": "Genghis Gordo",
+          "status": "concept",
+          "summary": "A wide-gauge gordo proposed as the range's most powerful format.",
+          "description": "A sixty-ring gordo for a cool, voluminous draw. Strength and flavour direction are concept targets, not tested blend characteristics.",
+          "vitola": { "name": "Gordo", "shape": "parejo", "lengthMm": 152, "ringGauge": 60 },
+          "strength": "Full",
+          "flavorDirection": ["Charred oak", "Black pepper", "Molasses"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["tsar-churchill", "imperator-double-corona", "inca-perfecto"]
+        }
+      ]
+    },
+    {
+      "slug": "charlemagne",
+      "number": 9,
+      "numeral": "IX",
+      "name": "Charlemagne",
+      "empire": "Carolingian Empire",
+      "period": "Crowned emperor AD 800",
+      "inspiration": "Carolingian script, manuscripts and the monogram of an emperor.",
+      "story": "Crowned emperor in Rome on Christmas Day in the year 800, Charlemagne presided over a revival of learning in which scribes developed the clear Carolingian minuscule that shaped later European handwriting. He signed documents with a monogram built from the letters of his name, KAROLVS. The Charlemagne collection uses a monogram of its own on champagne ivory.",
+      "accent": { "name": "Champagne", "hex": "#D7C39A", "on": "#0B0907" },
+      "emblem": { "motif": "Lozenge monogram inspired by the Karolus signature", "note": "Inspired by the structure of Carolingian monograms; it is an original arrangement, not a reproduction of the historical signature." },
+      "products": [
+        {
+          "slug": "charlemagne-lancero",
+          "name": "Charlemagne Lancero",
+          "status": "concept",
+          "summary": "A long, narrow lancero with a scholarly elegance.",
+          "description": "The lancero's slim gauge favours the wrapper's character. The format is a concept proposal; wrapper and blend are to be confirmed.",
+          "vitola": { "name": "Lancero", "shape": "parejo", "lengthMm": 190, "ringGauge": 38 },
+          "strength": "Mild–Medium",
+          "flavorDirection": ["Hazelnut", "Hay", "Light spice"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["akbar-lonsdale", "caesar-toro", "napoleon-robusto"]
+        }
+      ]
+    },
+    {
+      "slug": "saadian",
+      "number": 10,
+      "numeral": "X",
+      "name": "Saadian",
+      "empire": "Saadian dynasty of Morocco",
+      "period": "c. 1510 – 1659",
+      "inspiration": "Marrakesh, zellige geometry and the emerald and gold of the Saadian court.",
+      "story": "The Saadians ruled Morocco through the sixteenth and early seventeenth centuries. After victory at the Battle of Alcácer Quibir in 1578, Ahmad al-Mansur built the El Badi palace in Marrakesh, and the dynasty's tombs there remain celebrated for their carved cedar, stucco and zellige — mosaic tilework of interlacing stars cut by hand. The Saadian collection draws an eight-point zellige star in antique gold on deep emerald.",
+      "accent": { "name": "Saadian Emerald", "hex": "#0A6048", "on": "#F3E7CC" },
+      "emblem": { "motif": "Eight-point zellige star", "note": "Geometric star from Moroccan zellige tilework, used as ornament; no religious text or flags are used." },
+      "feature": true,
+      "products": [
+        {
+          "slug": "saadian-belicoso",
+          "name": "Saadian Belicoso",
+          "status": "concept",
+          "summary": "A belicoso with a short tapered head, the signature of the Moroccan collection.",
+          "description": "A belicoso — shorter in the taper than a pyramide — chosen for a refined, focused draw. The Saadian band and box carry the collection's emerald and zellige identity. All tobacco details remain to be confirmed with the manufacturer.",
+          "vitola": { "name": "Belicoso", "shape": "belicoso", "lengthMm": 140, "ringGauge": 52 },
+          "strength": "Medium",
+          "flavorDirection": ["Date", "Cinnamon", "Cedar"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["suleiman-corona-gorda", "pharaoh-pyramide", "akbar-lonsdale"]
+        }
+      ]
+    },
+    {
+      "slug": "inca",
+      "number": 11,
+      "numeral": "XI",
+      "name": "Inca",
+      "empire": "Inca Empire",
+      "period": "c. 1438 – 1533",
+      "inspiration": "Mountain terraces, stepped stonework and the gold of the Andes.",
+      "story": "From its capital at Cusco, the Inca state — Tawantinsuyu — joined some four thousand kilometres of the Andes with a road network and terraced the mountains for agriculture. Its masons fitted stone without mortar so precisely that the walls still stand. The Inca collection uses the stepped profile of those terraces in sun gold.",
+      "accent": { "name": "Andean Gold", "hex": "#C08A2A", "on": "#0B0907" },
+      "emblem": { "motif": "Stepped Andean terrace", "note": "Architectural and textile step motif; sacred imagery such as Inti is deliberately not used." },
+      "products": [
+        {
+          "slug": "inca-perfecto",
+          "name": "Inca Perfecto",
+          "status": "concept",
+          "summary": "A perfecto, tapered at both ends.",
+          "description": "A figurado closed at the foot and tapered at the head, one of the most demanding shapes for a roller. The format is a concept proposal subject to the manufacturer's capability.",
+          "vitola": { "name": "Perfecto", "shape": "perfecto", "lengthMm": 127, "ringGauge": 52 },
+          "strength": "Medium–Full",
+          "flavorDirection": ["Cacao nib", "Red pepper", "Earth"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["pharaoh-pyramide", "genghis-gordo", "saadian-belicoso"]
+        }
+      ]
+    },
+    {
+      "slug": "imperator",
+      "number": 12,
+      "numeral": "XII",
+      "name": "Imperator",
+      "empire": "The imperial legacy",
+      "period": "Across the collection",
+      "inspiration": "The title shared by every empire in the range — the house signature.",
+      "story": "Imperator began as the Latin acclamation of a victorious commander and became the word from which 'emperor' descends. The Imperator collection is the house's own signature: the crown, laurel and EC monogram of Empire Cigars, in imperial gold on obsidian.",
+      "accent": { "name": "Imperial Gold", "hex": "#D6AD55", "on": "#0B0907" },
+      "emblem": { "motif": "The Empire Cigars crest", "note": "The master crest of the brand." },
+      "products": [
+        {
+          "slug": "imperator-double-corona",
+          "name": "Imperator Double Corona",
+          "status": "concept",
+          "summary": "The house flagship: a double corona.",
+          "description": "The largest classic parejo in the range, proposed as the house flagship. Every specification is a concept until the manufacturer confirms the blend and construction.",
+          "vitola": { "name": "Double Corona", "shape": "parejo", "lengthMm": 194, "ringGauge": 49 },
+          "strength": "Full",
+          "flavorDirection": ["Cedar", "Dark cocoa", "Aged leather"],
+          "packaging": "Presentation box of 10 (concept)",
+          "related": ["caesar-toro", "tsar-churchill", "genghis-gordo"]
+        }
+      ]
+    }
+  ]
+}

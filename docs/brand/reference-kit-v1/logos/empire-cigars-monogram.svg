@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="52" fill="#0B0907"/>
+<g transform="translate(256 130) scale(1.05)"><path d="M-70 8 L-50 -28 L-24 0 L0 -48 L24 0 L50 -28 L70 8 L58 25 L-58 25 Z" fill="none" stroke="#D6AD55" stroke-width="5" stroke-linejoin="round"/><path d="M-54 34 H54" stroke="#D6AD55" stroke-width="5"/></g>
+<text x="256" y="300" text-anchor="middle" font-family="Georgia,serif" font-size="145" fill="#D6AD55" letter-spacing="-12">EC</text>
+<path d="M112 344 H400" stroke="#D6AD55" stroke-width="3"/>
+<text x="256" y="390" text-anchor="middle" font-family="Georgia,serif" font-size="27" letter-spacing="5" fill="#F3E7CC">EMPIRE</text>
+</svg>

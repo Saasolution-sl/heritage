@@ -1,0 +1,112 @@
+/*
+ * Empire Cigars design tokens. The single source for colour, type, spacing and
+ * motion on the website. Mirrors docs/brand/tokens.json; collection accents
+ * come from src/data/collections.json and are set per element as --accent.
+ */
+:root {
+  /* Master palette */
+  --ec-obsidian: #0b0907;
+  --ec-imperial-gold: #d6ad55;
+  --ec-antique-gold: #9a7434;
+  --ec-tobacco: #5b321e;
+  --ec-ivory: #f3e7cc;
+
+  /* Derived tones (tints of the master palette only) */
+  --ec-obsidian-2: #13100c;
+  --ec-obsidian-3: #1c1712;
+  --ec-tobacco-deep: #2a160c;
+  --ec-ivory-muted: #c9bda3; /* secondary text on obsidian, 10.7:1 */
+  --ec-ivory-faint: #8f8572; /* captions only, 5.5:1 on obsidian */
+  --ec-gold-line: rgb(214 173 85 / 0.28);
+  --ec-gold-glow: rgb(214 173 85 / 0.12);
+
+  /* Collection accents (defaults; pages set --accent from data) */
+  --ec-accent-caesar: #7e1d33;
+  --ec-accent-pharaoh: #1d4f9c;
+  --ec-accent-tsar: #6a2119;
+  --ec-accent-suleiman: #24583a;
+  --ec-accent-akbar: #5e8a6a;
+  --ec-accent-napoleon: #1a3a63;
+  --ec-accent-cyrus: #0c5e67;
+  --ec-accent-genghis: #a66b32;
+  --ec-accent-charlemagne: #d7c39a;
+  --ec-accent-saadian: #0a6048;
+  --ec-accent-inca: #c08a2a;
+  --ec-accent-imperator: #d6ad55;
+  --accent: var(--ec-imperial-gold);
+
+  /* Semantic roles */
+  --bg: var(--ec-obsidian);
+  --surface: var(--ec-obsidian-2);
+  --surface-raised: var(--ec-obsidian-3);
+  --text: var(--ec-ivory);
+  --text-muted: var(--ec-ivory-muted);
+  --text-faint: var(--ec-ivory-faint);
+  --highlight: var(--ec-imperial-gold);
+  --line: var(--ec-gold-line);
+  --line-strong: var(--ec-antique-gold);
+  --focus: var(--ec-imperial-gold);
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.86rem);
+  --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.08rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.45vw, 1.45rem);
+  --step-2: clamp(1.5rem, 1.3rem + 0.9vw, 2.1rem);
+  --step-3: clamp(2rem, 1.6rem + 1.8vw, 3.1rem);
+  --step-4: clamp(2.6rem, 1.9rem + 3.2vw, 4.8rem);
+  --step-5: clamp(3.1rem, 2rem + 5vw, 6.6rem);
+  --tracking-caps: 0.22em;
+  --leading-tight: 1.05;
+  --leading-body: 1.65;
+
+  /* Spacing (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --section: clamp(4.5rem, 3rem + 6vw, 8.5rem);
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  --measure: 38rem;
+  --max: 1320px;
+
+  /* Borders, radii, shadows */
+  --border: 1px solid var(--line);
+  --border-strong: 1px solid var(--line-strong);
+  --radius-0: 0;
+  --radius-1: 2px;
+  --radius-2: 6px;
+  --shadow-1: 0 1px 0 rgb(255 255 255 / 0.03), 0 10px 30px rgb(0 0 0 / 0.35);
+  --shadow-2: 0 30px 80px rgb(0 0 0 / 0.55);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --dur-1: 160ms;
+  --dur-2: 320ms;
+  --dur-3: 700ms;
+
+  /* Layers */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-header: 100;
+  --z-menu: 200;
+  --z-gate: 1000;
+}
+
+/* Breakpoints (reference — CSS custom properties cannot be used in media queries):
+   --bp-sm: 40rem (640px) · --bp-md: 48rem (768px) · --bp-lg: 64rem (1024px) · --bp-xl: 80rem (1280px) */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-1: 0ms;
+    --dur-2: 0ms;
+    --dur-3: 0ms;
+  }
+}
