@@ -22,14 +22,14 @@ Source of truth: `src/data/collections.json`. Types and helpers: `src/lib/catalo
 | Field | Type | Notes |
 |---|---|---|
 | `slug`, `name` | string | URL `/cigars/{slug}/` |
-| `status` | `concept` \| `upcoming` \| `available` | Drives badges and availability text. Only `available` products may ever show a price. |
+| `status` | `concept` \| `upcoming` \| `available` | Drives badges and trade-availability text. Only `available` products may ever show a trade price. |
 | `summary`, `description` | string | |
-| `vitola` | `{ name, shape, lengthMm, ringGauge }` | `shape`: `parejo`, `torpedo`, `belicoso`, `perfecto`. Drives the cigar render and band length. |
+| `vitola` | `{ name, shape, pressed?, lengthMm, ringGauge }` | `shape`: `parejo`, `torpedo`, `belicoso`, `perfecto`, `salomon`; `pressed: true` for box-pressed. Drives the cigar render and band length. |
 | `strength` | string \| null | |
-| `flavorDirection` | string[] | Intended direction while a concept; real tasting notes once verified |
+| `flavorDirection` | string[] | Flavour profile from the reference sheet (a target until the blend is final) |
 | `packaging` | string \| null | |
 | `related` | string[] | Product slugs |
-| `wrapper`, `binder`, `filler`, `countryOfOrigin`, `manufacturer` | string \| null | **Leave null until verified.** Pages print "To be confirmed by the manufacturer". |
+| `wrapper`, `binder`, `filler`, `countryOfOrigin`, `manufacturer` | string \| null | **Leave null until the blend is final.** Pages show the brand-level sourcing statement from `src/config/site.ts` (Latin American tobaccos, several partner manufacturers) until then. |
 | `price`, `currency` | number \| null, string \| null | For commerce; never set while `status` is `concept`. |
 | `specStatus` | `concept` \| `verified` | Set to `verified` only when the manufacturer confirms the specification; removes the "(concept)" labels. |
 

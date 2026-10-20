@@ -3,11 +3,12 @@
 // commerce platform later means changing one file.
 import data from '@/data/collections.json';
 
-/** concept: design proposal only · upcoming: confirmed product, not on sale · available: on sale */
+/** concept: in development · upcoming: confirmed, trade orders not yet open · available: orderable by trade partners */
 export type ProductStatus = 'concept' | 'upcoming' | 'available';
-export type VitolaShape = 'parejo' | 'torpedo' | 'belicoso' | 'perfecto';
+export type VitolaShape = 'parejo' | 'torpedo' | 'belicoso' | 'perfecto' | 'salomon';
 
-export type Vitola = { name: string; shape: VitolaShape; lengthMm: number; ringGauge: number };
+/** `pressed`: box-pressed, a softly squared cross-section. */
+export type Vitola = { name: string; shape: VitolaShape; pressed?: boolean; lengthMm: number; ringGauge: number };
 
 export type Product = {
   slug: string;
@@ -85,7 +86,7 @@ export const statusLabel: Record<ProductStatus, string> = {
 };
 
 export const statusNote: Record<ProductStatus, string> = {
-  concept: 'Design concept. Not yet produced or offered for sale.',
-  upcoming: 'Confirmed product, not yet on sale.',
-  available: 'Available to purchase where sales are permitted.',
+  concept: 'In development. Not yet available for trade orders.',
+  upcoming: 'Confirmed product. Trade orders opening soon.',
+  available: 'Available to trade partners where permitted.',
 };

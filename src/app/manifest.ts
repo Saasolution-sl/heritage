@@ -4,8 +4,8 @@ export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Empire Cigars',
-    short_name: 'Empire Cigars',
+    name: 'Heritage Cigars',
+    short_name: 'Heritage Cigars',
     start_url: '/',
     display: 'browser',
     background_color: '#0b0907',

@@ -1,31 +1,25 @@
 # Deployment
 
-The site is a static export: `npm run build` writes plain HTML, CSS, JS and assets to `out/`. No server, database or secrets are required.
+The site is a Next.js app. All pages are pre-rendered at build time; one small piece of request-time code (`src/proxy.ts`) reads the visitor's country from the hosting provider and sets the `hc-country` cookie used by the trade-access gate. It needs no database and no secrets.
 
-## Build settings (any host)
+## Recommended: Vercel
+1. Push the repository to GitHub (once you decide where it should live).
+2. Import it in Vercel. The Next.js preset is detected; no build settings to change.
+3. Set `NEXT_PUBLIC_SITE_URL=https://www.<your-domain>` for Production (canonical URLs, Open Graph, sitemap).
+4. Deploy and add the custom domain. Vercel sends `x-vercel-ip-country`, so country detection works with no extra setup.
 
-| Setting | Value |
+## Other hosts
+| Host | Notes |
 |---|---|
-| Node.js | 20.9 or later (22 LTS recommended) |
-| Install | `npm ci` |
-| Build | `npm run build` |
-| Output directory | `out` |
-| Environment variable | `NEXT_PUBLIC_SITE_URL=https://www.<your-domain>` (canonical URLs, Open Graph, sitemap). Without it, URLs default to `http://localhost:3000`. |
-
-## Vercel
-1. Push the repository to GitHub (once a remote is authorised).
-2. Import it in Vercel; the Next.js preset is detected. Set `NEXT_PUBLIC_SITE_URL` for Production.
-3. Deploy. Add the custom domain and redirect the apex to `www` (or the reverse) so canonical URLs match.
-
-## Netlify / Cloudflare Pages / static hosting
-Build command `npm run build`, publish directory `out`. Configure the host to serve `404.html` for unknown paths (Netlify and Cloudflare Pages do this automatically).
+| Netlify | Next.js runtime is automatic; country header `x-nf-country`. |
+| Cloudflare (OpenNext adapter) | Country header `cf-ipcountry`. |
+| Own server / VPS | `npm ci && npm run build && npm start` (Node 20.9+), behind Cloudflare or CloudFront so a country header reaches the app. Without one, the gate applies the default minimum age (21) and lets visitors pick their country. |
 
 ## Before each deploy
 ```bash
-npm run verify   # typecheck, lint, unit tests, build, link/metadata check, browser tests
+npm run verify   # typecheck, lint, unit tests, build, crawl check, browser tests
 ```
-If artwork changed: `npm run brand && npm run brand:png` and commit the regenerated `public/brand/`.
+If artwork or collection data changed: `npm run brand && npm run brand:png`, then commit the regenerated `public/brand/`.
 
-## Not included (requires authorisation)
-- No remote repository is configured and nothing has been pushed.
-- No hosting project, domain, analytics, payment provider or email service has been created.
+## Not done (needs your decision)
+- No remote repository, hosting project, domain, analytics, payment provider or email service has been set up, and nothing has been pushed.

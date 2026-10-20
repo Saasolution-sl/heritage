@@ -8,7 +8,7 @@ export type SearchEntry = { href: string; title: string; kind: string; text: str
 const normalise = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 
 // The query lives in the URL (?q=), so searches can be linked to and survive reloads.
-const QUERY_EVENT = 'ec-search-query';
+const QUERY_EVENT = 'hc-search-query';
 const subscribe = (cb: () => void) => {
   window.addEventListener('popstate', cb);
   window.addEventListener(QUERY_EVENT, cb);

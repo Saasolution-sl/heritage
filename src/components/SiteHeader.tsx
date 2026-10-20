@@ -46,9 +46,9 @@ export function SiteHeader() {
   return (
     <header className="site-header" data-solid={solid}>
       <div className="container site-header__inner">
-        <Link href="/" className="site-header__logo" aria-label="Empire Cigars, home">
+        <Link href="/" className="site-header__logo" aria-label="Heritage Cigars, home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logos/empire-cigars-horizontal-gold.svg" alt="" width={1120} height={220} />
+          <img src="/brand/logos/heritage-cigars-horizontal-gold.svg" alt="" width={1120} height={220} />
         </Link>
         <nav className="site-nav" aria-label="Main">
           <ul>
@@ -103,7 +103,7 @@ export function SiteHeader() {
               </li>
             </ul>
           </nav>
-          <p className="mobile-menu__note">All collections are concepts in development and are not offered for sale.</p>
+          <p className="mobile-menu__note">Trade only. All collections are in development.</p>
         </div>
       )}
     </header>

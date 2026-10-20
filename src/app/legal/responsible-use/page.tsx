@@ -1,42 +1,55 @@
 import { PageHead } from '@/components/PageHead';
-import { compliance, markets } from '@/config/compliance';
+import { compliance, countryRules, defaultRule } from '@/config/compliance';
 import { pageMeta } from '@/lib/seo';
 
-export const metadata = pageMeta({ title: 'Age and Responsible Use', description: 'Empire Cigars is an adult tobacco brand. Our approach to age restrictions and health warnings.', path: '/legal/responsible-use/' });
+export const metadata = pageMeta({ title: 'Trade Access and Age', description: 'Heritage Cigars is a trade-only tobacco brand. How access to this website works in each country.', path: '/legal/responsible-use/' });
+
+const regionNames = (() => {
+  try {
+    return new Intl.DisplayNames(['en'], { type: 'region' });
+  } catch {
+    return null;
+  }
+})();
 
 export default function ResponsibleUsePage() {
+  const rows = Object.entries(countryRules)
+    .map(([code, rule]) => ({ code, name: regionNames?.of(code) ?? code, rule }))
+    .sort((a, b) => a.name.localeCompare(b.name));
   return (
     <>
-      <PageHead eyebrow="Legal" title="Age and responsible use" crumbs={[{ label: 'Age and responsible use' }]} />
+      <PageHead eyebrow="Legal" title="Trade access and age" crumbs={[{ label: 'Trade access and age' }]} />
       <section className="section">
         <div className="container prose">
           <p>{compliance.generalNotice}</p>
-          <h2>Age</h2>
+          <h2>Trade only</h2>
+          <p>Heritage Cigars sells only to businesses in the tobacco trade. Visitors are asked to confirm that they work in the trade and meet the minimum legal age of their country.</p>
+          <h2>How the country is set</h2>
           <p>
-            Visitors are asked to confirm that they are at least {compliance.gateMinimumAge}, or the legal smoking age where they live if that is higher. This is a self-declaration, not age verification. Before any online sale, a verified age-check process appropriate to each market will be required.
+            The site reads the country your connection appears to come from, as reported by the hosting provider, and applies that country’s minimum age. You can change the country in the access dialog. Where the country is unknown or not listed below, a minimum age of {defaultRule.minimumAge} applies.
           </p>
-          <h2>Markets configured</h2>
+          <p>This is a self-declaration, not age or trade verification. Trade accounts are verified when they are opened.</p>
+          <h2>Minimum ages applied</h2>
           <table className="spec-table">
             <thead>
               <tr>
-                <th scope="col">Market</th>
+                <th scope="col">Country</th>
                 <th scope="col">Minimum age</th>
-                <th scope="col">Sales</th>
               </tr>
             </thead>
             <tbody>
-              {markets.map((m) => (
-                <tr key={m.code}>
-                  <th scope="row">{m.name}</th>
-                  <td>{m.minimumAge}</td>
-                  <td>Not enabled</td>
+              {rows.map((r) => (
+                <tr key={r.code}>
+                  <th scope="row">{r.name}</th>
+                  <td>{r.rule.minimumAge}</td>
                 </tr>
               ))}
+              <tr>
+                <th scope="row">Other countries</th>
+                <td>{defaultRule.minimumAge}</td>
+              </tr>
             </tbody>
           </table>
-          <p className="muted" style={{ marginTop: 'var(--space-4)' }}>
-            These settings are placeholders pending legal review of each market’s rules on advertising, online sales, delivery and health warnings.
-          </p>
           <h2>Health</h2>
           <p>We make no health claims. No tobacco product is safe, and cigars are not a safe alternative to cigarettes.</p>
         </div>

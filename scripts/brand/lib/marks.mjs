@@ -1,4 +1,4 @@
-// The Empire Cigars master marks: crown, EC monogram, laurel crest and wordmark.
+// The Heritage Cigars master marks: crown, HC monogram, laurel crest and wordmark.
 // Every function returns path data in its own coordinate box so the logo
 // variants can be composed without re-drawing anything.
 import { poly, circle, lozenge, laurelWreath, r } from './geometry.mjs';
@@ -29,18 +29,18 @@ export function crownMarkup(transform = '') {
 }
 
 /**
- * EC monogram: a bold E set tight against a lighter C, so the pair reads left
- * to right as one unit without the letters fusing. Box: 0 0 200 200, caps centred.
+ * HC monogram: a bold H set close to a lighter C, so the pair reads left to
+ * right as one unit without the letters fusing. Box: 0 0 200 200, caps centred.
  */
 export function monogram() {
-  const e = textPath('E', { face: 'displayBold', size: 146, x: 58, y: 146, anchor: 'middle' });
-  const c = textPath('C', { face: 'display', size: 152, x: 143, y: 147, anchor: 'middle' });
-  return { d: c + e, width: 200, height: 200 };
+  const h = textPath('H', { face: 'displayBold', size: 124, x: 55, y: 139, anchor: 'middle' });
+  const c = textPath('C', { face: 'display', size: 129, x: 146, y: 140, anchor: 'middle' });
+  return { d: c + h, width: 200, height: 200 };
 }
 
-/** Wordmark "EMPIRE CIGARS", outlined. Returns path and its width at the given cap size. */
+/** Wordmark "HERITAGE CIGARS", outlined. Returns path and its width at the given cap size. */
 export function wordmark({ size = 80, tracking = 0.16, x = 0, y = 0, anchor = 'start', face = 'display' } = {}) {
-  const text = 'EMPIRE CIGARS';
+  const text = 'HERITAGE CIGARS';
   return {
     d: textPath(text, { face, size, tracking, x, y, anchor }),
     width: measure(text, { face, size, tracking }),

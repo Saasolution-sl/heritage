@@ -6,7 +6,7 @@ import { pageMeta } from '@/lib/seo';
 
 export const metadata = pageMeta({
   title: 'Our Heritage',
-  description: 'Empire Cigars is a contemporary cigar house inspired by the great empires of history. Our heritage is borrowed with respect; our own story starts now.',
+  description: 'Heritage Cigars is a contemporary cigar house inspired by the great empires of history. Our heritage is borrowed with respect; our own story starts now.',
   path: '/heritage/',
 });
 
@@ -16,7 +16,7 @@ export default function HeritagePage() {
       <PageHead
         eyebrow="Our heritage"
         title="A legacy in every puff."
-        lede="Empire Cigars is a new house with an old subject. We take our inspiration from the empires that shaped the world — and we are honest that our own history is only beginning."
+        lede="Heritage Cigars is a new house with an old subject. We take our inspiration from the empires that shaped the world — and we are honest that our own history is only beginning."
         crumbs={[{ label: 'Our Heritage' }]}
       />
       <section className="section">
@@ -24,7 +24,7 @@ export default function HeritagePage() {
           <div className="prose" data-reveal>
             <h2>A contemporary house</h2>
             <p>
-              Empire Cigars is a brand in development. We have no founding legend, no decades of family tradition and no factory of our own to point to — and we will not invent them. What we have is a clear idea: a range of cigars in which each collection takes its character from one of history’s great empires, dynasties or civilisations.
+              Heritage Cigars is a new cigar house, based in Ceuta and Paraguay, supplying the tobacco trade. We have no founding legend and no decades of family tradition to point to — and we will not invent them. What we have is a clear idea: a range of cigars in which each collection takes its character from one of history’s great empires, dynasties or civilisations, blended from tobaccos grown across Latin America.
             </p>
             <h2>Why empires</h2>
             <p>
@@ -32,7 +32,7 @@ export default function HeritagePage() {
             </p>
             <h2>With respect</h2>
             <p>
-              The names are tributes, not claims of provenance or endorsement. Our emblems are original drawings based on architectural and decorative motifs. We have deliberately avoided religious symbols, sacred imagery and modern national emblems. Before launch, each collection’s name and imagery will be reviewed for trademark availability and cultural sensitivity in the markets where it is sold.
+              The names are tributes, not claims of provenance or endorsement. Our emblems are original drawings based on architectural and decorative motifs.
             </p>
             <Rule />
             <p style={{ marginTop: 'var(--space-5)' }}>

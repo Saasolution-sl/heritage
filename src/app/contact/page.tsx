@@ -4,8 +4,8 @@ import { PageHead } from '@/components/PageHead';
 import { pageMeta } from '@/lib/seo';
 
 export const metadata = pageMeta({
-  title: 'Contact',
-  description: 'How to reach Empire Cigars.',
+  title: 'Trade Enquiries',
+  description: 'Heritage Cigars supplies importers, distributors, retailers and lounges. Based in Ceuta, Spain, and Paraguay.',
   path: '/contact/',
 });
 
@@ -14,32 +14,43 @@ export default function ContactPage() {
   const hasContact = Boolean(email || phone || address);
   return (
     <>
-      <PageHead eyebrow="Contact" title="Contact" lede="Trade, press and partnership enquiries." crumbs={[{ label: 'Contact' }]} />
+      <PageHead eyebrow="Contact" title="Trade enquiries" lede="We work with importers, distributors, specialist retailers and cigar lounges." crumbs={[{ label: 'Contact' }]} />
       <section className="section">
-        <div className="container prose">
-          {hasContact ? (
+        <div className="container split" style={{ alignItems: 'start' }}>
+          <div className="prose">
+            <h2 style={{ marginTop: 0 }}>Where we are</h2>
             <ul>
-              {email && (
-                <li>
-                  Email: <a href={`mailto:${email}`}>{email}</a>
-                </li>
-              )}
-              {phone && <li>Telephone: {phone}</li>}
-              {address && <li>Address: {address}</li>}
+              {site.locations.map((l) => (
+                <li key={l}>{l}</li>
+              ))}
             </ul>
-          ) : (
-            <>
-              <p>
-                Empire Cigars is in development and has not yet published its contact channels. Enquiry details will appear here, and in the footer of every page, as soon as the company confirms them.
-              </p>
+            {hasContact ? (
+              <ul>
+                {email && (
+                  <li>
+                    Email: <a href={`mailto:${email}`}>{email}</a>
+                  </li>
+                )}
+                {phone && <li>Telephone: {phone}</li>}
+                {address && <li>Address: {address}</li>}
+              </ul>
+            ) : (
               <p className="claim-note">
-                <strong>Why there is no form here:</strong> a contact form needs a confirmed recipient, a privacy notice and a data-processing arrangement. We will add one when those are in place rather than collect messages no one can answer.
+                <strong>Contact details to follow.</strong> Addresses, email and telephone for both offices will be published here and in the footer as soon as they are registered.
               </p>
-            </>
-          )}
-          <p style={{ marginTop: 'var(--space-6)' }}>
-            Meanwhile, explore <Link href="/collections/">the collections</Link> or read <Link href="/journal/introducing-empire-cigars/">our introduction</Link>.
-          </p>
+            )}
+          </div>
+          <div className="prose">
+            <h2 style={{ marginTop: 0 }}>What to include</h2>
+            <ul>
+              <li>Company name, country and type of business</li>
+              <li>Collections and formats of interest</li>
+              <li>Expected volumes and the markets you supply</li>
+            </ul>
+            <p className="muted">
+              Trade pricing, minimum orders and availability are shared directly with trade partners. Browse <Link href="/collections/">the collections</Link> in the meantime.
+            </p>
+          </div>
         </div>
       </section>
     </>

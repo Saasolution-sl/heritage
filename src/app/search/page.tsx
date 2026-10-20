@@ -4,7 +4,7 @@ import { PageHead } from '@/components/PageHead';
 import { SearchClient, type SearchEntry } from '@/components/SearchClient';
 import { pageMeta } from '@/lib/seo';
 
-export const metadata = { ...pageMeta({ title: 'Search', description: 'Search the Empire Cigars collections and journal.', path: '/search/' }), robots: { index: false } };
+export const metadata = { ...pageMeta({ title: 'Search', description: 'Search the Heritage Cigars collections and journal.', path: '/search/' }), robots: { index: false } };
 
 // The index is built at compile time and shipped with the page; no server needed.
 const index: SearchEntry[] = [

@@ -6,7 +6,7 @@ import { pageMeta } from '@/lib/seo';
 
 export const metadata = pageMeta({
   title: 'Brand Assets',
-  description: 'The Empire Cigars logo family, palette, collection accents, cigar bands and packaging artwork.',
+  description: 'The Heritage Cigars logo family, palette, collection accents, cigar bands and packaging artwork.',
   path: '/brand/',
 });
 
@@ -19,15 +19,15 @@ const master = [
 ];
 
 const logos = [
-  { file: 'empire-cigars-primary-full-color', label: 'Primary logo' },
-  { file: 'empire-cigars-horizontal-gold', label: 'Horizontal (header)' },
-  { file: 'empire-cigars-stacked-full-color', label: 'Stacked' },
-  { file: 'empire-cigars-wordmark-tagline-full-color', label: 'Secondary wordmark' },
-  { file: 'empire-cigars-monogram-gold', label: 'EC monogram' },
-  { file: 'empire-cigars-crest-gold', label: 'Compact crest' },
-  { file: 'empire-cigars-laurel-white', label: 'Laurel crest, white' },
-  { file: 'empire-cigars-primary-on-light', label: 'Primary, light grounds', light: true },
-  { file: 'empire-cigars-horizontal-black', label: 'Horizontal, black', light: true },
+  { file: 'heritage-cigars-primary-full-color', label: 'Primary logo' },
+  { file: 'heritage-cigars-horizontal-gold', label: 'Horizontal (header)' },
+  { file: 'heritage-cigars-stacked-full-color', label: 'Stacked' },
+  { file: 'heritage-cigars-wordmark-tagline-full-color', label: 'Secondary wordmark' },
+  { file: 'heritage-cigars-monogram-gold', label: 'HC monogram' },
+  { file: 'heritage-cigars-crest-gold', label: 'Compact crest' },
+  { file: 'heritage-cigars-laurel-white', label: 'Laurel crest, white' },
+  { file: 'heritage-cigars-primary-on-light', label: 'Primary, light grounds', light: true },
+  { file: 'heritage-cigars-horizontal-black', label: 'Horizontal, black', light: true },
 ];
 
 const Download = ({ href }: { href: string }) => (

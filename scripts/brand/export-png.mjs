@@ -15,9 +15,9 @@ const add = (src, out, width) => jobs.push({ src, out, width });
 
 for (const name of ['primary', 'horizontal', 'stacked', 'wordmark', 'wordmark-tagline', 'monogram', 'crest', 'laurel']) {
   for (const pal of ['full-color', 'gold', 'white', 'black', 'on-light']) {
-    add(`logos/empire-cigars-${name}-${pal}.svg`, `logos/png/empire-cigars-${name}-${pal}-1200.png`, 1200);
+    add(`logos/heritage-cigars-${name}-${pal}.svg`, `logos/png/heritage-cigars-${name}-${pal}-1200.png`, 1200);
   }
-  add(`logos/empire-cigars-${name}-on-obsidian.svg`, `logos/png/empire-cigars-${name}-on-obsidian-1200.png`, 1200);
+  add(`logos/heritage-cigars-${name}-on-obsidian.svg`, `logos/png/heritage-cigars-${name}-on-obsidian-1200.png`, 1200);
 }
 for (const s of [16, 32, 48]) add('favicons/favicon.svg', `favicons/favicon-${s}.png`, s);
 for (const s of [180, 192, 512]) add('favicons/app-icon.svg', `favicons/app-icon-${s}.png`, s);

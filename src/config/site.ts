@@ -1,10 +1,19 @@
 // Site-wide settings. Contact details and social accounts stay empty until the
 // company supplies them: the site renders nothing rather than inventing them.
 export const site = {
-  name: 'Empire Cigars',
+  name: 'Heritage Cigars',
   tagline: 'A Collection of Empires. A Legacy in Every Puff.',
   description:
-    'Empire Cigars is a contemporary luxury cigar house in development: twelve cigar concepts inspired by the craftsmanship, character and legacy of the world’s great empires.',
+    'Heritage Cigars is a luxury cigar house supplying the tobacco trade: twelve collections inspired by the craftsmanship, character and legacy of the world’s great empires, blended from Latin American tobaccos.',
+  /** Business model: trade only (importers, distributors, retailers, lounges). */
+  audience: 'trade' as const,
+  /** Where the company is based. Addresses follow once registered. */
+  locations: ['Ceuta, Spain', 'Paraguay'],
+  /** Brand-level sourcing statement, confirmed by the company (17 October 2026). */
+  sourcing: {
+    tobacco: 'Blends of tobaccos from several Latin American countries',
+    manufacturing: 'Several partner manufacturers, matched to each blend',
+  },
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, ''),
   contact: {
     email: null as string | null,

@@ -52,7 +52,7 @@ describe('collection data', () => {
   });
 
   it('finds products by slug', () => {
-    expect(getProduct('saadian-belicoso')?.collection.name).toBe('Saadian');
+    expect(getProduct('saadian-robusto')?.collection.name).toBe('Saadian');
     expect(getProduct('nope')).toBeUndefined();
   });
 });

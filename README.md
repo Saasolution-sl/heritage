@@ -1,21 +1,22 @@
-# Empire Cigars
+# Heritage Cigars
 
 *A Collection of Empires. A Legacy in Every Puff.*
 
-Brand system, asset library and catalog website for **Empire Cigars**, a luxury cigar house in development whose twelve collections are inspired by the great empires of history.
+Brand system, asset library and trade website for **Heritage Cigars** (formerly Empire Cigars), a luxury cigar house supplying the tobacco trade from Ceuta (Spain) and Paraguay. Its twelve collections are inspired by the great empires of history and blended from tobaccos grown in several Latin American countries.
 
-> **Catalog mode.** Every product is a design concept. Nothing is offered for sale, and no prices, tobacco origins, blends or manufacturers are claimed until verified. See `docs/launch-checklist.md`.
+> **Trade catalogue.** Heritage Cigars sells business-to-business only. The site has no prices, cart or checkout; visitors confirm they are tobacco-trade professionals of legal age in their country. Wrapper, binder, filler and manufacturer are published per blend once final. See `docs/launch-checklist.md`.
 
 ## What's here
 
 | Path | Contents |
 |---|---|
-| `src/app/` | Website routes (Next.js App Router, static export) |
-| `src/components/` | Header, footer, age gate, cards, gallery, search |
+| `src/app/` | Website routes (Next.js App Router, pre-rendered) |
+| `src/proxy.ts` | Reads the visitor's country from the host and sets the `hc-country` cookie |
+| `src/components/` | Header, footer, trade-access gate, cards, gallery, formats row, search |
 | `src/data/collections.json` | The twelve collections and their products (single source of truth) |
-| `src/lib/` | Typed catalog access, journal articles, SEO helper, age-confirmation store |
-| `src/config/` | Site details, commerce switch (off), compliance settings per market |
-| `src/styles/tokens.css` | Design tokens (colour, type, spacing, motion, layers) |
+| `src/config/` | Site and company details, trade ordering switch (off), per-country minimum ages |
+| `src/lib/` | Typed catalog access, journal, SEO helper, access store |
+| `src/styles/tokens.css` | Design tokens (`--hc-*`) |
 | `public/brand/` | Generated brand assets: logos, favicons, emblems, cigar bands, product renders, packaging, patterns, social, stationery |
 | `scripts/brand/` | Asset generator (SVG) and PNG/ICO exporter |
 | `docs/brand/` | Brand guidelines, asset-library guide, tokens JSON, and the original supplied kit |
@@ -36,14 +37,13 @@ npm run dev          # http://localhost:3000
 | Command | What it does |
 |---|---|
 | `npm run dev` | Development server |
-| `npm run build` | Static site in `out/` |
-| `npm start` | Serve `out/` on http://127.0.0.1:3000 |
+| `npm run build` / `npm start` | Production build / serve it |
 | `npm run typecheck` / `npm run lint` | TypeScript and ESLint |
-| `npm test` | Unit tests: data integrity, no unverified claims, token contrast, asset library |
-| `npm run check` | After a build: every link and asset resolves, every page has title, description, canonical and OG image, no prices or cart wording |
-| `npm run test:e2e` | Browser tests against `out/` (run `npm run build` first) |
+| `npm test` | Unit tests: data integrity, no unconfirmed product claims, contrast, band lettering, country rules |
+| `npm run check` | After a build: starts the server, crawls every page, checks links, assets, metadata and the 404 |
+| `npm run test:e2e` | Browser tests against the production build (run `npm run build` first) |
 | `npm run verify` | All of the above, in order |
-| `npm run brand` | Regenerate all SVG brand assets from `scripts/brand` and `collections.json` |
+| `npm run brand` | Regenerate the SVG brand assets from `scripts/brand` and `collections.json` |
 | `npm run brand:png` | Regenerate PNG exports and `favicon.ico` (uses Chromium via Playwright) |
 
 On Windows, if Playwright has no browser yet: `npx playwright install chromium`.
@@ -54,11 +54,11 @@ On Windows, if Playwright has no browser yet: `npx playwright install chromium`.
 
 ## Deployment
 
-Static hosting (Vercel, Netlify, Cloudflare Pages, S3). Build `npm run build`, output `out`, set `NEXT_PUBLIC_SITE_URL`. Details: `docs/deployment.md`.
+Vercel recommended (country detection works out of the box). Set `NEXT_PUBLIC_SITE_URL`. Details: `docs/deployment.md`.
 
-## Installing on F:\Empire-Cigars (Windows)
+## Installing on your Windows machine
 
-This project was built in a cloud session that cannot reach your `F:` drive. It is delivered as `empire-cigars.bundle` (complete Git history) and `empire-cigars.zip` (working files). On your Windows machine:
+This project was built in a cloud session that cannot reach your `F:` drive. It is delivered as `heritage-cigars.bundle` (complete Git history) and `heritage-cigars.zip` (working files). The steps below use `F:\Empire-Cigars`, the folder you originally specified; use `F:\Heritage-Cigars` instead if you prefer the new name.
 
 ```powershell
 # 1. Check the drive and that the target does not already exist
@@ -66,7 +66,7 @@ Test-Path F:\                 # must be True
 Test-Path F:\Empire-Cigars    # if True, inspect it first — do not overwrite existing work
 
 # 2. Clone from the bundle (keeps the Git history)
-git clone C:\path\to\empire-cigars.bundle F:\Empire-Cigars
+git clone C:\path\to\heritage-cigars.bundle F:\Empire-Cigars
 cd F:\Empire-Cigars
 git remote remove origin       # the bundle path is not a real remote
 

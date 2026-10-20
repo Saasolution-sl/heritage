@@ -14,7 +14,7 @@ export const metadata = {
     description: site.description,
     path: '/',
   }),
-  title: { absolute: 'Empire Cigars — A Collection of Empires' },
+  title: { absolute: 'Heritage Cigars — A Collection of Empires' },
 };
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <div className="container hero__grid">
           <div className="hero__copy">
-            <p className="eyebrow">Empire Cigars · Twelve collections</p>
+            <p className="eyebrow">Heritage Cigars · Twelve collections</p>
             <h1 id="hero-title" className="hero__title">
               A Collection of <em>Empires.</em>
             </h1>
@@ -60,7 +60,7 @@ export default function Home() {
               Twelve empires, one house.
             </h2>
             <Rule />
-            <p className="lede">Each collection carries its own colour, emblem and band, and the same Empire Cigars signature. All twelve are concepts in development.</p>
+            <p className="lede">Each collection carries its own colour, emblem and band, and the same Heritage Cigars signature. All twelve are in development for the trade.</p>
           </div>
           <div className="collection-grid">
             {collections.map((c, i) => (
@@ -114,14 +114,14 @@ export default function Home() {
                 <span className="facts__n">I</span>
                 <div>
                   <h3>Format</h3>
-                  <p>A proposed vitola for every collection, from a 38-ring lancero to a 60-ring gordo.</p>
+                  <p>A distinct vitola for every collection, from a 38-ring lancero to a 60-ring gordo, a box-pressed robusto and a grand salomón.</p>
                 </div>
               </li>
               <li>
                 <span className="facts__n">II</span>
                 <div>
                   <h3>Leaf and blend</h3>
-                  <p>To be developed with a manufacturing partner. We will publish origins only once confirmed.</p>
+                  <p>Blends of tobaccos from several Latin American countries, each made with the partner manufacturer best suited to it.</p>
                 </div>
               </li>
               <li>
@@ -133,7 +133,7 @@ export default function Home() {
               </li>
             </ul>
             <p className="claim-note">
-              <strong>What is confirmed today:</strong> the brand, the band and packaging designs, and the proposed formats. Tobacco, construction method and country of manufacture are not yet confirmed.
+              <strong>Confirmed today:</strong> the brand, bands, packaging and formats, and our sourcing approach — Latin American tobaccos, several partner manufacturers. The countries and manufacturer behind each blend will be named once agreed.
             </p>
             <p style={{ marginTop: 'var(--space-5)' }}>
               <Link href="/craftsmanship/" className="text-link">
@@ -169,7 +169,7 @@ export default function Home() {
           </div>
           <div className="saadian__media" data-reveal>
             <img className="saadian__box" src={assets.boxLid(saadian)} alt="Saadian presentation box lid, concept artwork: emerald band and eight-point zellige star" width={1200} height={800} loading="lazy" />
-            <img className="saadian__detail" src={assets.bandDetail(saadianProduct)} alt="Saadian band on the belicoso, concept illustration" width={400} height={400} loading="lazy" />
+            <img className="saadian__detail" src={assets.bandDetail(saadianProduct)} alt="Saadian band on the box-pressed robusto, concept illustration" width={400} height={400} loading="lazy" />
             <img className="saadian__emblem" src={assets.emblem(saadian)} alt="Saadian eight-point zellige star emblem" width={200} height={200} loading="lazy" />
           </div>
         </div>
@@ -182,11 +182,11 @@ export default function Home() {
             The house
           </p>
           <blockquote className="quote" data-reveal>
-            Every empire left something behind — a road, a pattern, a way of making things well. Empire Cigars is a contemporary house built on that idea.
+            Every empire left something behind — a road, a pattern, a way of making things well. Heritage Cigars is a contemporary house built on that idea.
           </blockquote>
           <Rule />
           <p className="lede" style={{ textAlign: 'center' }}>
-            We are a new brand, and we say so. Our heritage is borrowed with respect from history; our own record begins with the first cigar we make.
+            We are a new house, based in Ceuta and Paraguay, and we say so. Our heritage is borrowed with respect from history; our own record begins with the first cigar we make.
           </p>
           <Link href="/heritage/" className="text-link">
             Our heritage

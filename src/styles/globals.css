@@ -66,8 +66,8 @@ p {
   text-wrap: pretty;
 }
 ::selection {
-  background: var(--ec-imperial-gold);
-  color: var(--ec-obsidian);
+  background: var(--hc-imperial-gold);
+  color: var(--hc-obsidian);
 }
 .visually-hidden {
   position: absolute !important;
@@ -82,8 +82,8 @@ p {
   left: var(--space-4);
   top: -100px;
   z-index: var(--z-gate);
-  background: var(--ec-imperial-gold);
-  color: var(--ec-obsidian);
+  background: var(--hc-imperial-gold);
+  color: var(--hc-obsidian);
   padding: var(--space-2) var(--space-4);
   font-weight: 600;
 }
@@ -208,14 +208,14 @@ p {
   transition: background var(--dur-2) var(--ease), color var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease);
 }
 .btn--primary {
-  --btn-bg: var(--ec-imperial-gold);
-  --btn-fg: var(--ec-obsidian);
-  --btn-line: var(--ec-imperial-gold);
+  --btn-bg: var(--hc-imperial-gold);
+  --btn-fg: var(--hc-obsidian);
+  --btn-line: var(--hc-imperial-gold);
 }
 .btn--primary:hover {
-  background: var(--ec-ivory);
-  border-color: var(--ec-ivory);
-  color: var(--ec-obsidian);
+  background: var(--hc-ivory);
+  border-color: var(--hc-ivory);
+  color: var(--hc-obsidian);
 }
 .btn--ghost:hover {
   border-color: var(--highlight);
@@ -567,7 +567,7 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 16.5rem), 1fr));
 }
 .card {
-  --accent: var(--ec-imperial-gold);
+  --accent: var(--hc-imperial-gold);
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -595,7 +595,7 @@ p {
   overflow: hidden;
   background:
     radial-gradient(70% 55% at 50% 45%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 72%),
-    var(--ec-obsidian);
+    var(--hc-obsidian);
 }
 .card__media::after {
   content: '';
@@ -679,6 +679,50 @@ p {
   color: var(--text-faint);
 }
 
+/* ---------- Formats at a glance ---------- */
+.formats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+  gap: var(--space-5) var(--space-3);
+}
+@media (min-width: 64rem) {
+  .formats {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.formats__item {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-1);
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.formats__item img {
+  height: 15rem;
+  width: auto;
+  margin-bottom: var(--space-3);
+  transition: transform var(--dur-2) var(--ease);
+}
+.formats__item:hover img {
+  transform: translateY(-6px);
+}
+.formats__item strong {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 500;
+}
+.formats__item span {
+  color: var(--text-muted);
+}
+.formats__size {
+  color: var(--text-faint) !important;
+  font-variant-numeric: tabular-nums;
+}
+
 /* ---------- Badges ---------- */
 .badge {
   display: inline-flex;
@@ -709,7 +753,7 @@ p {
   border-top: var(--border);
 }
 .showcase__item {
-  --accent: var(--ec-imperial-gold);
+  --accent: var(--hc-imperial-gold);
   display: grid;
   grid-template-columns: 3.2rem 1fr;
   gap: var(--space-4) var(--space-5);
@@ -854,11 +898,11 @@ p {
 
 /* ---------- Saadian feature ---------- */
 .saadian {
-  --accent: var(--ec-accent-saadian);
+  --accent: var(--hc-accent-saadian);
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(120deg, #06281e 0%, #0b3f30 45%, var(--ec-obsidian) 100%);
+  background: linear-gradient(120deg, #06281e 0%, #0b3f30 45%, var(--hc-obsidian) 100%);
   border-block: 1px solid rgb(214 173 85 / 0.35);
 }
 .saadian::before {
@@ -883,7 +927,7 @@ p {
 }
 .saadian__detail {
   border: 1px solid rgb(214 173 85 / 0.3);
-  background: var(--ec-obsidian);
+  background: var(--hc-obsidian);
   aspect-ratio: 1;
   object-fit: cover;
   width: 100%;
@@ -1033,7 +1077,7 @@ p {
   border: var(--border);
   background:
     radial-gradient(60% 60% at 50% 45%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 72%),
-    var(--ec-obsidian);
+    var(--hc-obsidian);
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -1172,10 +1216,10 @@ p {
   display: grid;
   place-items: center;
   padding: var(--space-5);
-  background: var(--ec-obsidian);
+  background: var(--hc-obsidian);
 }
 .asset__preview--light {
-  background: var(--ec-ivory);
+  background: var(--hc-ivory);
 }
 .asset__preview img {
   max-height: 100%;
@@ -1234,7 +1278,7 @@ p {
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: var(--border);
-  background: var(--ec-obsidian-2);
+  background: var(--hc-obsidian-2);
   padding-block: var(--space-9) var(--space-6);
   font-size: 0.92rem;
 }
@@ -1276,8 +1320,8 @@ p {
 .warning {
   margin-top: var(--space-8);
   padding: var(--space-5);
-  border: 1px solid var(--ec-ivory);
-  color: var(--ec-ivory);
+  border: 1px solid var(--hc-ivory);
+  color: var(--hc-ivory);
   font-weight: 600;
   text-align: center;
   font-size: 1rem;
@@ -1298,7 +1342,9 @@ p {
   inset: 0;
   z-index: var(--z-gate);
   display: grid;
-  place-items: center;
+  /* Centred when it fits; scrollable from the top on short screens. */
+  place-items: safe center;
+  overflow-y: auto;
   padding: var(--gutter);
   background: rgb(11 9 7 / 0.97);
   backdrop-filter: blur(8px);
@@ -1306,16 +1352,16 @@ p {
 .age-gate__panel {
   width: min(100%, 34rem);
   display: grid;
-  gap: var(--space-5);
+  gap: var(--space-4);
   justify-items: center;
   text-align: center;
-  padding: var(--space-8) var(--space-6);
+  padding: var(--space-6) var(--space-5);
   border: var(--border-strong);
-  background: var(--ec-obsidian);
+  background: var(--hc-obsidian);
   box-shadow: var(--shadow-2);
 }
 .age-gate__panel img {
-  width: 120px;
+  width: 84px;
 }
 .age-gate__panel h2 {
   font-size: var(--step-3);
@@ -1326,6 +1372,31 @@ p {
 }
 .age-gate__denied {
   color: var(--text);
+}
+.age-gate__country {
+  display: grid;
+  gap: var(--space-2);
+  width: min(100%, 20rem);
+  text-align: left;
+  font-size: var(--step--1);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.age-gate__country select {
+  min-height: 2.75rem;
+  padding: 0 var(--space-3);
+  background: var(--surface);
+  color: var(--text);
+  border: var(--border-strong);
+  border-radius: var(--radius-1);
+  font: 400 1rem var(--font-body);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.age-gate__rule strong {
+  color: var(--highlight);
+  font-weight: 600;
 }
 .age-gate__fine {
   font-size: var(--step--1);

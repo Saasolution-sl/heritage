@@ -1,11 +1,10 @@
 import type { NextConfig } from 'next';
 
-// Static export: every route is pre-rendered HTML, so the site can be hosted
-// on any static host (Vercel, Netlify, Cloudflare Pages, S3) with no server.
+// Pages are pre-rendered at build time; src/proxy.ts runs per request to pass
+// the visitor's country to the trade-access gate, so the site is deployed as
+// a Next.js app (Vercel, Netlify or `next start`) rather than a static export.
 const nextConfig: NextConfig = {
-  output: 'export',
   trailingSlash: true,
-  images: { unoptimized: true },
   poweredByHeader: false,
 };
 

@@ -1,14 +1,14 @@
 {
-  "name": "empire-cigars",
+  "name": "heritage-cigars",
   "version": "0.1.0",
   "private": true,
-  "description": "Empire Cigars — brand system, asset library and catalog website.",
+  "description": "Heritage Cigars \u2014 brand system, asset library and catalog website.",
   "scripts": {
     "dev": "next dev",
     "brand": "node scripts/brand/build-assets.mjs",
     "brand:png": "node scripts/brand/export-png.mjs",
     "build": "next build",
-    "start": "node scripts/serve.mjs",
+    "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

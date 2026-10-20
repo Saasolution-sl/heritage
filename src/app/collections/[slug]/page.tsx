@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!c) return {};
   return pageMeta({
     title: `${c.name} Collection`,
-    description: `${c.name}, inspired by the ${c.empire}. ${c.inspiration} A concept collection by Empire Cigars.`,
+    description: `${c.name}, inspired by the ${c.empire}. ${c.inspiration} A concept collection by Heritage Cigars.`,
     path: `/collections/${c.slug}/`,
   });
 }

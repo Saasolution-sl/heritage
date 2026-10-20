@@ -5,7 +5,7 @@ import { pageMeta } from '@/lib/seo';
 
 export const metadata = pageMeta({
   title: 'Journal',
-  description: 'Notes on cigar craftsmanship, vitolas, tobacco, storage and the inspirations behind the Empire Cigars collections.',
+  description: 'Notes on cigar craftsmanship, vitolas, tobacco, storage and the inspirations behind the Heritage Cigars collections.',
   path: '/journal/',
 });
 

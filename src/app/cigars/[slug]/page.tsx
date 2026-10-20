@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import type { CSSProperties, ReactNode } from 'react';
 import { allProducts, getProduct, relatedProducts, assets, inches, statusLabel, statusNote } from '@/lib/catalog';
 import { commerce } from '@/config/commerce';
+import { site } from '@/config/site';
 import { PageHead } from '@/components/PageHead';
 import { Gallery } from '@/components/Gallery';
 import { CollectionCard } from '@/components/CollectionCard';
@@ -18,31 +19,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { product: p, collection: c } = found;
   return pageMeta({
     title: p.name,
-    description: `${p.name}: a proposed ${p.vitola.name.toLowerCase()} for the ${c.name} collection, inspired by the ${c.empire}. Concept product, not offered for sale.`,
+    description: `${p.name}: the ${p.vitola.name.toLowerCase()} of the ${c.name} collection, inspired by the ${c.empire}. ${p.vitola.lengthMm} mm × ${p.vitola.ringGauge} ring gauge, ${p.strength?.toLowerCase() ?? ''} strength. For the tobacco trade.`,
     path: `/cigars/${p.slug}/`,
   });
 }
 
-const Pending = () => <span className="pending">To be confirmed by the manufacturer</span>;
+const Pending = ({ note = 'To be confirmed by the manufacturer' }: { note?: string }) => <span className="pending">{note}</span>;
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const found = getProduct((await params).slug);
   if (!found) notFound();
   const { product: p, collection: c } = found;
   const verified = p.specStatus === 'verified';
-  const tag = verified ? '' : ' (concept)';
+  const tag = verified ? '' : ' (reference)';
 
   const rows: [string, ReactNode][] = [
     [`Vitola${tag}`, p.vitola.name],
-    [`Shape${tag}`, p.vitola.shape === 'parejo' ? 'Parejo (straight)' : `Figurado (${p.vitola.shape})`],
+    [`Shape${tag}`, p.vitola.pressed ? 'Parejo, box-pressed (square)' : p.vitola.shape === 'parejo' ? 'Parejo (round)' : `Figurado (${p.vitola.shape === 'salomon' ? 'salomón' : p.vitola.shape})`],
     [`Length${tag}`, `${p.vitola.lengthMm} mm (${inches(p.vitola.lengthMm)})`],
     [`Ring gauge${tag}`, `${p.vitola.ringGauge} (${((p.vitola.ringGauge / 64) * 25.4).toFixed(1)} mm)`],
     [`Strength${tag}`, p.strength ?? <Pending />],
     ['Wrapper', p.wrapper ?? <Pending />],
     ['Binder', p.binder ?? <Pending />],
     ['Filler', p.filler ?? <Pending />],
-    ['Country of origin', p.countryOfOrigin ?? <Pending />],
-    ['Manufacturer', p.manufacturer ?? <Pending />],
+    ['Tobacco origin', p.countryOfOrigin ?? <Pending note={`${site.sourcing.tobacco}; countries for this blend to be confirmed`} />],
+    ['Manufacturer', p.manufacturer ?? <Pending note="Partner manufacturer to be named" />],
     [`Packaging${tag}`, p.packaging ?? <Pending />],
   ];
 
@@ -92,12 +93,16 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="availability">
               <strong>Availability</strong>
               <span className="muted">{statusNote[p.status]}</span>
-              {!commerce.enabled && <span className="muted">Pricing will be published only when the product is confirmed and sales are permitted.</span>}
+              {!commerce.enabled && (
+                <span className="muted">
+                  Trade pricing and minimum orders will be shared with trade partners once the blend is confirmed. <Link href="/contact/">Trade enquiries</Link>
+                </span>
+              )}
             </div>
 
             {!verified && (
               <p className="claim-note">
-                <strong>Concept specifications.</strong> Format, strength and tasting direction below are design proposals from the brand brief. They will change if the manufacturer’s blend development requires it.
+                <strong>Reference specifications.</strong> Format, strength and flavour profile follow the Heritage Cigars reference sheet. Each is confirmed with the manufacturer during blend development and may be adjusted.
               </p>
             )}
 
@@ -114,7 +119,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             </table>
 
             <div>
-              <h2 style={{ fontSize: 'var(--step-2)', marginBottom: 'var(--space-3)' }}>Intended flavour direction{verified ? '' : ' (concept)'}</h2>
+              <h2 style={{ fontSize: 'var(--step-2)', marginBottom: 'var(--space-3)' }}>Flavour profile{verified ? '' : ' (target)'}</h2>
               {p.flavorDirection.length ? (
                 <ul className="flavor-list">
                   {p.flavorDirection.map((f) => (

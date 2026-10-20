@@ -1,4 +1,4 @@
-// Generates the Empire Cigars vector asset library into public/brand from the
+// Generates the Heritage Cigars vector asset library into public/brand from the
 // marks in ./lib and the collection data in src/data/collections.json.
 // Run: npm run brand   (then npm run brand:png for raster exports)
 import fs from 'node:fs';
@@ -33,7 +33,7 @@ const svgDoc = (w, h, body, title, extra = '') =>
 const layouts = {
   primary: {
     size: [900, 680],
-    title: 'Empire Cigars primary logo',
+    title: 'Heritage Cigars primary logo',
     body: (p) => {
       const c = crest();
       const w = wordmark({ size: 72, tracking: 0.16, x: 450, y: 548, anchor: 'middle' });
@@ -43,57 +43,57 @@ const layouts = {
     },
   },
   wordmark: {
-    size: [1000, 150],
-    title: 'Empire Cigars wordmark',
+    size: [1100, 150],
+    title: 'Heritage Cigars wordmark',
     body: (p) => {
-      const w = wordmark({ size: 92, tracking: 0.16, x: 500, y: 108, anchor: 'middle' });
+      const w = wordmark({ size: 92, tracking: 0.16, x: 550, y: 108, anchor: 'middle' });
       return `<path fill="${p.word}" d="${w.d}"/>`;
     },
   },
   'wordmark-tagline': {
-    size: [1000, 230],
-    title: 'Empire Cigars wordmark with tagline',
+    size: [1100, 230],
+    title: 'Heritage Cigars wordmark with tagline',
     body: (p) => {
-      const w = wordmark({ size: 92, tracking: 0.16, x: 500, y: 100, anchor: 'middle' });
-      const t = tagline({ size: 24, x: 500, y: 200 });
-      return `<path fill="${p.word}" d="${w.d}"/><path fill="${p.rule}" d="${rect(260, 141, 480, 2.5)}${lozenge(500, 142, 12, 12)}"/><path fill="${p.tag}" d="${t.d}"/>`;
+      const w = wordmark({ size: 92, tracking: 0.16, x: 550, y: 100, anchor: 'middle' });
+      const t = tagline({ size: 24, x: 550, y: 200 });
+      return `<path fill="${p.word}" d="${w.d}"/><path fill="${p.rule}" d="${rect(310, 141, 480, 2.5)}${lozenge(550, 142, 12, 12)}"/><path fill="${p.tag}" d="${t.d}"/>`;
     },
   },
   monogram: {
     size: [200, 200],
-    title: 'Empire Cigars EC monogram',
+    title: 'Heritage Cigars HC monogram',
     body: (p) => `<path fill="${p.mark}" d="${monogram().d}"/>`,
   },
   crest: {
     size: [200, 270],
-    title: 'Empire Cigars compact crest',
+    title: 'Heritage Cigars compact crest',
     body: (p) => `<g fill="${p.mark}">${compactMark().body}</g>`,
   },
   laurel: {
     size: [300, 330],
-    title: 'Empire Cigars laurel crest',
+    title: 'Heritage Cigars laurel crest',
     body: (p) => {
       const c = crest();
       return `<path fill="${p.mark}" d="${c.wreath}"/><g fill="${p.mark}">${c.mono}${c.crown}</g>`;
     },
   },
   horizontal: {
-    size: [1120, 220],
-    title: 'Empire Cigars horizontal logo',
+    size: [1160, 220],
+    title: 'Heritage Cigars horizontal logo',
     body: (p) => {
       const w = wordmark({ size: 76, tracking: 0.16, x: 230, y: 138, anchor: 'start' });
       return `<g fill="${p.mark}" transform="translate(20 10) scale(.74)">${compactMark().body}</g><path fill="${p.rule}" d="${rect(196, 40, 2.5, 140)}"/><path fill="${p.word}" d="${w.d}"/>`;
     },
   },
   stacked: {
-    size: [700, 640],
-    title: 'Empire Cigars stacked logo',
+    size: [800, 620],
+    title: 'Heritage Cigars stacked logo',
     body: (p) => {
-      const empire = textPath('EMPIRE', { face: 'display', size: 150, x: 350, y: 380, tracking: 0.12 });
-      const cigars = textPath('CIGARS', { face: 'display', size: 64, x: 350, y: 486, tracking: 0.5 });
-      const t = tagline({ size: 18, x: 350, y: 590 });
-      return `<g fill="${p.mark}">${crownMarkup('translate(225 70) scale(1.25)')}</g><path fill="${p.word}" d="${empire}${cigars}"/>` +
-        `<path fill="${p.rule}" d="${rect(150, 418, 400, 2.5)}${lozenge(350, 419, 12, 12)}${rect(150, 528, 400, 1.5)}"/><path fill="${p.tag}" d="${t.d}"/>`;
+      const heritage = textPath('HERITAGE', { face: 'display', size: 118, x: 400, y: 362, tracking: 0.12 });
+      const cigars = textPath('CIGARS', { face: 'display', size: 60, x: 400, y: 462, tracking: 0.5 });
+      const t = tagline({ size: 18, x: 400, y: 566 });
+      return `<g fill="${p.mark}">${crownMarkup('translate(275 60) scale(1.25)')}</g><path fill="${p.word}" d="${heritage}${cigars}"/>` +
+        `<path fill="${p.rule}" d="${rect(160, 398, 480, 2.5)}${lozenge(400, 399, 12, 12)}${rect(160, 504, 480, 1.5)}"/><path fill="${p.tag}" d="${t.d}"/>`;
     },
   },
 };
@@ -112,11 +112,11 @@ const palettes = {
 for (const [name, layout] of Object.entries(layouts)) {
   const [w, h] = layout.size;
   for (const [pal, colors] of Object.entries(palettes)) {
-    write(`logos/empire-cigars-${name}-${pal}.svg`, svgDoc(w, h, layout.body(colors), `${layout.title} (${pal})`));
+    write(`logos/heritage-cigars-${name}-${pal}.svg`, svgDoc(w, h, layout.body(colors), `${layout.title} (${pal})`));
   }
   // A version with its own obsidian ground for previews and documents.
   write(
-    `logos/empire-cigars-${name}-on-obsidian.svg`,
+    `logos/heritage-cigars-${name}-on-obsidian.svg`,
     svgDoc(w + 80, h + 80, `<rect width="${w + 80}" height="${h + 80}" fill="${OBSIDIAN}"/><g transform="translate(40 40)">${layout.body(palettes['full-color'])}</g>`, `${layout.title} on obsidian`),
   );
 }
@@ -125,9 +125,9 @@ for (const [name, layout] of Object.entries(layouts)) {
 
 const iconBg = (s, rad) => `<rect width="${s}" height="${s}" rx="${rad}" fill="${OBSIDIAN}"/>`;
 // Small sizes: monogram only, heavier ring. Large sizes: crown and monogram.
-write('favicons/favicon.svg', svgDoc(64, 64, `${iconBg(64, 12)}<path fill="${GOLD}" transform="translate(4 3) scale(.28)" d="${monogram().d}"/>`, 'Empire Cigars'));
-write('favicons/app-icon.svg', svgDoc(512, 512, `${iconBg(512, 96)}<path fill-rule="evenodd" fill="${ANTIQUE}" d="${ring(256, 256, 226, 220)}"/><g fill="${GOLD}" transform="translate(141 96) scale(1.15)">${compactMark().body}</g>`, 'Empire Cigars app icon'));
-write('favicons/maskable-icon.svg', svgDoc(512, 512, `<rect width="512" height="512" fill="${OBSIDIAN}"/><g fill="${GOLD}" transform="translate(171 130) scale(.85)">${compactMark().body}</g>`, 'Empire Cigars maskable icon'));
+write('favicons/favicon.svg', svgDoc(64, 64, `${iconBg(64, 12)}<path fill="${GOLD}" transform="translate(4 3) scale(.28)" d="${monogram().d}"/>`, 'Heritage Cigars'));
+write('favicons/app-icon.svg', svgDoc(512, 512, `${iconBg(512, 96)}<path fill-rule="evenodd" fill="${ANTIQUE}" d="${ring(256, 256, 226, 220)}"/><g fill="${GOLD}" transform="translate(141 96) scale(1.15)">${compactMark().body}</g>`, 'Heritage Cigars app icon'));
+write('favicons/maskable-icon.svg', svgDoc(512, 512, `<rect width="512" height="512" fill="${OBSIDIAN}"/><g fill="${GOLD}" transform="translate(171 130) scale(.85)">${compactMark().body}</g>`, 'Heritage Cigars maskable icon'));
 
 /* --------------------------------------------------------------- emblems */
 
@@ -245,20 +245,20 @@ for (const c of collections) write(`packaging/${c.slug}-box-lid.svg`, boxLid(c))
 const adultLine = (x, y, size = 18, color = IVORY) =>
   `<path fill="${color}" opacity=".75" d="${textPath('FOR ADULTS OF LEGAL SMOKING AGE ONLY', { face: 'sans', size, x, y, tracking: 0.18 })}"/>`;
 
-write('social/avatar.svg', svgDoc(1080, 1080, `<rect width="1080" height="1080" fill="${OBSIDIAN}"/><path fill-rule="evenodd" fill="${ANTIQUE}" d="${ring(540, 540, 470, 464)}"/><g fill="${GOLD}" transform="translate(340 240) scale(2)">${compactMark().body}</g>`, 'Empire Cigars social avatar'));
+write('social/avatar.svg', svgDoc(1080, 1080, `<rect width="1080" height="1080" fill="${OBSIDIAN}"/><path fill-rule="evenodd" fill="${ANTIQUE}" d="${ring(540, 540, 470, 464)}"/><g fill="${GOLD}" transform="translate(340 240) scale(2)">${compactMark().body}</g>`, 'Heritage Cigars social avatar'));
 
 {
   const c = crest();
   const w = wordmark({ size: 84, tracking: 0.18, x: 600, y: 470, anchor: 'middle' });
   const t = tagline({ size: 22, x: 600, y: 540 });
-  write('social/og-default.svg', svgDoc(1200, 630, `<rect width="1200" height="630" fill="${OBSIDIAN}"/><path fill-rule="evenodd" fill="${GOLD}" d="${rect(24, 24, 1152, 582)}${rect(28, 28, 1144, 574)}"/><g transform="translate(510 70) scale(.6)"><path fill="${GOLD}" d="${c.wreath}"/><g fill="${GOLD}">${c.mono}${c.crown}</g></g><path fill="${GOLD}" d="${w.d}"/><path fill="${IVORY}" d="${t.d}"/>`, 'Empire Cigars'));
+  write('social/og-default.svg', svgDoc(1200, 630, `<rect width="1200" height="630" fill="${OBSIDIAN}"/><path fill-rule="evenodd" fill="${GOLD}" d="${rect(24, 24, 1152, 582)}${rect(28, 28, 1144, 574)}"/><g transform="translate(510 70) scale(.6)"><path fill="${GOLD}" d="${c.wreath}"/><g fill="${GOLD}">${c.mono}${c.crown}</g></g><path fill="${GOLD}" d="${w.d}"/><path fill="${IVORY}" d="${t.d}"/>`, 'Heritage Cigars'));
 
   const wb = wordmark({ size: 64, tracking: 0.2, x: 750, y: 270, anchor: 'middle' });
   let strip = '';
   collections.forEach((col, i) => {
     strip += `<rect x="${i * 125}" y="488" width="125" height="12" fill="${col.accent.hex}"/>`;
   });
-  write('social/banner-1500x500.svg', svgDoc(1500, 500, `<rect width="1500" height="500" fill="${OBSIDIAN}"/><path fill="${GOLD}" d="${wb.d}"/><path fill="${ANTIQUE}" d="${rect(450, 310, 600, 2)}${lozenge(750, 311, 12, 12)}"/><path fill="${IVORY}" d="${tagline({ size: 22, x: 750, y: 370 }).d}"/>${strip}`, 'Empire Cigars social banner'));
+  write('social/banner-1500x500.svg', svgDoc(1500, 500, `<rect width="1500" height="500" fill="${OBSIDIAN}"/><path fill="${GOLD}" d="${wb.d}"/><path fill="${ANTIQUE}" d="${rect(450, 310, 600, 2)}${lozenge(750, 311, 12, 12)}"/><path fill="${IVORY}" d="${tagline({ size: 22, x: 750, y: 370 }).d}"/>${strip}`, 'Heritage Cigars social banner'));
 }
 
 function collectionPost(c, W, H, story = false) {
@@ -324,5 +324,12 @@ for (const c of collections) {
 
 /* ------------------------------------------------------------------ index */
 
-fs.writeFileSync(path.join(OUT, 'manifest.json'), JSON.stringify({ generatedBy: 'scripts/brand/build-assets.mjs', files: written.sort() }, null, 2) + '\n');
+// Remove files this generator wrote last time but no longer produces (e.g. a renamed product).
+const manifestFile = path.join(OUT, 'manifest.json');
+const previous = fs.existsSync(manifestFile) ? JSON.parse(fs.readFileSync(manifestFile, 'utf8')).files : [];
+for (const stale of previous.filter((f) => !written.includes(f))) {
+  fs.rmSync(path.join(OUT, stale), { force: true });
+  console.log(`Removed stale ${stale}`);
+}
+fs.writeFileSync(manifestFile, JSON.stringify({ generatedBy: 'scripts/brand/build-assets.mjs', files: written.sort() }, null, 2) + '\n');
 console.log(`Wrote ${written.length} SVG files to public/brand`);

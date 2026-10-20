@@ -6,15 +6,16 @@ import { pageMeta } from '@/lib/seo';
 
 export const metadata = pageMeta({
   title: 'Craftsmanship',
-  description: 'How Empire Cigars approaches format, leaf, blending, banding and packaging — and what is confirmed today versus what is still in development.',
+  description: 'How Heritage Cigars approaches format, leaf, blending, banding and packaging — and what is confirmed today versus what is still in development.',
   path: '/craftsmanship/',
 });
 
 const status = [
-  { area: 'Brand identity, bands and packaging design', state: 'Designed', note: 'Concept artwork complete; print production not yet approved.' },
-  { area: 'Proposed formats (vitolas)', state: 'Proposed', note: 'One format per collection, pending manufacturer review.' },
-  { area: 'Manufacturing partner', state: 'Not confirmed', note: 'Selection in progress.' },
-  { area: 'Tobacco: wrapper, binder, filler and origins', state: 'Not confirmed', note: 'Published only once verified.' },
+  { area: 'Brand identity, bands and packaging design', state: 'Designed', note: 'Artwork complete; print production not yet approved.' },
+  { area: 'Formats (vitolas), strength and flavour profile', state: 'Specified', note: 'Reference specification for all twelve; confirmed blend by blend.' },
+  { area: 'Tobacco sourcing', state: 'Confirmed', note: 'Blends of tobaccos from several Latin American countries.' },
+  { area: 'Manufacturing', state: 'Confirmed approach', note: 'Several partner manufacturers, each matched to a blend; names to follow.' },
+  { area: 'Wrapper, binder and filler per blend', state: 'In development', note: 'Published once each blend is final.' },
   { area: 'Construction method (e.g. hand-made, long filler)', state: 'Not confirmed', note: 'We make no construction claims until confirmed.' },
   { area: 'Ageing and resting periods', state: 'Not confirmed', note: 'No ageing claims are made.' },
 ];
@@ -36,13 +37,13 @@ export default function CraftsmanshipPage() {
             <h2>What we will ask of every cigar</h2>
             <ul>
               <li>A format chosen for the character of the collection, not for novelty.</li>
-              <li>A blend developed and tested with an experienced manufacturer, not assembled from a catalogue.</li>
+              <li>Tobaccos from several Latin American countries, each blend made by the partner manufacturer best suited to it.</li>
               <li>Consistent construction, draw and burn, checked before banding and boxing.</li>
               <li>A band and box made to the same standard as the cigar inside.</li>
               <li>Specifications published only when they are true.</li>
             </ul>
             <p className="claim-note">
-              <strong>These are aspirations, not product claims.</strong> They describe the brief we will give our manufacturing partner. We will report what has been achieved once production begins.
+              <strong>These are our standards, not product claims.</strong> They are the brief we give each manufacturing partner. We will report what has been achieved once production begins.
             </p>
           </div>
           <figure className="panel-figure" style={{ aspectRatio: '1' }} data-reveal>
@@ -95,7 +96,7 @@ export default function CraftsmanshipPage() {
               Each band is drawn as production-minded artwork: a gold-foil layer for rules, lettering and the medallion rings; a printed layer for the collection colour; and a separate layer for the collection emblem. The flat length of every band is calculated from its cigar’s ring gauge, with a 10 mm glue overlap.
             </p>
             <p>
-              Minimum line weights and letter sizes were set with foil stamping in mind. Final print approval, paper stock and foil choice will be made with the printer.
+              The band follows the tall shield form of our reference sheet: a crowned shield carrying the collection emblem, over a ribbon with the collection name at a cap height of at least 2 mm. Final print approval, paper stock and foil choice will be made with the printer.
             </p>
             <Link href="/brand/" className="text-link">
               See the brand assets

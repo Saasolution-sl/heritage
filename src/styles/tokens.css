@@ -1,51 +1,51 @@
 /*
- * Empire Cigars design tokens. The single source for colour, type, spacing and
+ * Heritage Cigars design tokens. The single source for colour, type, spacing and
  * motion on the website. Mirrors docs/brand/tokens.json; collection accents
  * come from src/data/collections.json and are set per element as --accent.
  */
 :root {
   /* Master palette */
-  --ec-obsidian: #0b0907;
-  --ec-imperial-gold: #d6ad55;
-  --ec-antique-gold: #9a7434;
-  --ec-tobacco: #5b321e;
-  --ec-ivory: #f3e7cc;
+  --hc-obsidian: #0b0907;
+  --hc-imperial-gold: #d6ad55;
+  --hc-antique-gold: #9a7434;
+  --hc-tobacco: #5b321e;
+  --hc-ivory: #f3e7cc;
 
   /* Derived tones (tints of the master palette only) */
-  --ec-obsidian-2: #13100c;
-  --ec-obsidian-3: #1c1712;
-  --ec-tobacco-deep: #2a160c;
-  --ec-ivory-muted: #c9bda3; /* secondary text on obsidian, 10.7:1 */
-  --ec-ivory-faint: #8f8572; /* captions only, 5.5:1 on obsidian */
-  --ec-gold-line: rgb(214 173 85 / 0.28);
-  --ec-gold-glow: rgb(214 173 85 / 0.12);
+  --hc-obsidian-2: #13100c;
+  --hc-obsidian-3: #1c1712;
+  --hc-tobacco-deep: #2a160c;
+  --hc-ivory-muted: #c9bda3; /* secondary text on obsidian, 10.7:1 */
+  --hc-ivory-faint: #8f8572; /* captions only, 5.5:1 on obsidian */
+  --hc-gold-line: rgb(214 173 85 / 0.28);
+  --hc-gold-glow: rgb(214 173 85 / 0.12);
 
   /* Collection accents (defaults; pages set --accent from data) */
-  --ec-accent-caesar: #7e1d33;
-  --ec-accent-pharaoh: #1d4f9c;
-  --ec-accent-tsar: #6a2119;
-  --ec-accent-suleiman: #24583a;
-  --ec-accent-akbar: #5e8a6a;
-  --ec-accent-napoleon: #1a3a63;
-  --ec-accent-cyrus: #0c5e67;
-  --ec-accent-genghis: #a66b32;
-  --ec-accent-charlemagne: #d7c39a;
-  --ec-accent-saadian: #0a6048;
-  --ec-accent-inca: #c08a2a;
-  --ec-accent-imperator: #d6ad55;
-  --accent: var(--ec-imperial-gold);
+  --hc-accent-caesar: #7e1d33;
+  --hc-accent-pharaoh: #1d4f9c;
+  --hc-accent-tsar: #6a2119;
+  --hc-accent-suleiman: #24583a;
+  --hc-accent-akbar: #5e8a6a;
+  --hc-accent-napoleon: #1a3a63;
+  --hc-accent-cyrus: #0c5e67;
+  --hc-accent-genghis: #a66b32;
+  --hc-accent-charlemagne: #d7c39a;
+  --hc-accent-saadian: #0a6048;
+  --hc-accent-inca: #c08a2a;
+  --hc-accent-imperator: #d6ad55;
+  --accent: var(--hc-imperial-gold);
 
   /* Semantic roles */
-  --bg: var(--ec-obsidian);
-  --surface: var(--ec-obsidian-2);
-  --surface-raised: var(--ec-obsidian-3);
-  --text: var(--ec-ivory);
-  --text-muted: var(--ec-ivory-muted);
-  --text-faint: var(--ec-ivory-faint);
-  --highlight: var(--ec-imperial-gold);
-  --line: var(--ec-gold-line);
-  --line-strong: var(--ec-antique-gold);
-  --focus: var(--ec-imperial-gold);
+  --bg: var(--hc-obsidian);
+  --surface: var(--hc-obsidian-2);
+  --surface-raised: var(--hc-obsidian-3);
+  --text: var(--hc-ivory);
+  --text-muted: var(--hc-ivory-muted);
+  --text-faint: var(--hc-ivory-faint);
+  --highlight: var(--hc-imperial-gold);
+  --line: var(--hc-gold-line);
+  --line-strong: var(--hc-antique-gold);
+  --focus: var(--hc-imperial-gold);
 
   /* Typography */
   --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;

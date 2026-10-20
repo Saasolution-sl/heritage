@@ -1,11 +1,12 @@
 import { collections } from '@/lib/catalog';
 import { CollectionCard } from '@/components/CollectionCard';
+import { FormatsAtAGlance } from '@/components/FormatsAtAGlance';
 import { PageHead } from '@/components/PageHead';
 import { pageMeta } from '@/lib/seo';
 
 export const metadata = pageMeta({
   title: 'The Collections',
-  description: 'Twelve Empire Cigars collections, each inspired by a great empire, dynasty or civilisation, from Caesar to the Saadian dynasty of Morocco.',
+  description: 'Twelve Heritage Cigars collections, each inspired by a great empire, dynasty or civilisation, from Caesar to the Saadian dynasty of Morocco.',
   path: '/collections/',
 });
 
@@ -15,11 +16,11 @@ export default function CollectionsPage() {
       <PageHead
         eyebrow="Twelve collections"
         title="The Collections"
-        lede="One house, twelve identities. Every collection shares the Empire Cigars signature and carries its own colour, emblem and band."
+        lede="One house, twelve identities. Every collection shares the Heritage Cigars signature and carries its own colour, emblem and band."
         crumbs={[{ label: 'Collections' }]}
       >
         <p className="claim-note">
-          <strong>Catalog mode.</strong> All twelve collections are concepts in development. Formats, strengths and tasting directions shown are proposals until confirmed by our manufacturer, and nothing is offered for sale.
+          <strong>Trade catalogue.</strong> All twelve collections are in development. Formats, strengths and flavour profiles follow our reference specification and are confirmed blend by blend with each manufacturer. Trade orders are not yet open.
         </p>
       </PageHead>
       <section className="section">
@@ -29,6 +30,7 @@ export default function CollectionsPage() {
           ))}
         </div>
       </section>
+      <FormatsAtAGlance />
     </>
   );
 }

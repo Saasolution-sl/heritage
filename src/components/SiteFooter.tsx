@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { nav, site } from '@/config/site';
-import { compliance, defaultMarket } from '@/config/compliance';
+import { compliance } from '@/config/compliance';
+import { CountryNotice } from '@/components/CountryNotice';
 
 export function SiteFooter() {
   const { email, phone, address } = site.contact;
@@ -10,9 +11,12 @@ export function SiteFooter() {
         <div className="site-footer__grid">
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="site-footer__logo" src="/brand/logos/empire-cigars-primary-full-color.svg" alt="Empire Cigars" width={900} height={680} loading="lazy" />
+            <img className="site-footer__logo" src="/brand/logos/heritage-cigars-primary-full-color.svg" alt="Heritage Cigars" width={900} height={680} loading="lazy" />
             <p className="muted" style={{ marginTop: 'var(--space-5)', maxWidth: '22rem' }}>
               {site.tagline}
+            </p>
+            <p className="muted" style={{ maxWidth: '22rem', fontSize: 'var(--step--1)' }}>
+              Supplying the tobacco trade from {site.locations.join(' and ')}.
             </p>
           </div>
           <div>
@@ -66,19 +70,15 @@ export function SiteFooter() {
                 <Link href="/legal/cookies/">Cookies and storage preferences</Link>
               </li>
               <li>
-                <Link href="/legal/responsible-use/">Age and responsible use</Link>
+                <Link href="/legal/responsible-use/">Trade access and age</Link>
               </li>
             </ul>
           </div>
         </div>
-        <p className="warning" role="note">
-          WARNING: {defaultMarket.warning}
-        </p>
+        <CountryNotice />
         <div className="site-footer__legal">
           <p>{compliance.generalNotice}</p>
-          <p>
-            All collections shown are design concepts. Nothing on this website is offered for sale.
-          </p>
+          <p>Trade only. Heritage Cigars does not sell to consumers.</p>
         </div>
       </div>
     </footer>

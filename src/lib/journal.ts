@@ -22,17 +22,17 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    slug: 'introducing-empire-cigars',
-    title: 'Introducing Empire Cigars',
+    slug: 'introducing-heritage-cigars',
+    title: 'Introducing Heritage Cigars',
     category: 'Announcements',
-    excerpt: 'Twelve collections, one house: what Empire Cigars is, what it is not yet, and how the range will develop.',
+    excerpt: 'Twelve collections, one house, supplying the trade: what Heritage Cigars is and how the range will develop.',
     status: 'draft',
     updated: '2026-10-17',
     body: [
-      { type: 'p', text: 'Empire Cigars is a cigar house in development. Its range is organised as twelve collections, each taking its character from one of history’s great empires, dynasties or civilisations — from imperial Rome to the Saadian court of Marrakesh.' },
-      { type: 'p', text: 'At this stage every collection is a concept: the name, the band, the emblem, the box and a proposed vitola. Blends, tobacco origins and the manufacturer have not yet been confirmed, and nothing is offered for sale. We publish the concepts openly and mark them as such, so that nothing on this site is mistaken for a product claim.' },
+      { type: 'p', text: 'Heritage Cigars is a new cigar house supplying the tobacco trade from Ceuta and Paraguay. Its range is organised as twelve collections, each taking its character from one of history’s great empires, dynasties or civilisations — from imperial Rome to the Saadian court of Marrakesh.' },
+      { type: 'p', text: 'Every collection has its name, band, emblem, box and vitola. The blends are built from tobaccos grown in several Latin American countries, and each is made with the partner manufacturer best suited to it. We will name the countries and manufacturer behind each blend once it is final.' },
       { type: 'h2', text: 'What comes next' },
-      { type: 'list', items: ['Selecting a manufacturing partner and developing the blends.', 'Confirming each vitola, strength and tasting profile against real samples.', 'Completing the legal review needed for each market before any sale or shipment.'] },
+      { type: 'list', items: ['Finalising each blend with its manufacturer.', 'Confirming every vitola, strength and flavour profile against finished samples.', 'Opening trade accounts for importers, distributors, retailers and lounges.'] },
       { type: 'note', text: 'This announcement is a draft for editorial review.' },
     ],
     sources: [],
@@ -48,10 +48,11 @@ export const articles: Article[] = [
       { type: 'p', text: '“Vitola” is the Spanish trade word for a cigar’s format: its length, its thickness and its shape. Two cigars rolled from the same blend can taste noticeably different in different vitolas, because the format changes how much wrapper is burned relative to filler, how hot the smoke runs and how long the cigar lasts.' },
       { type: 'h2', text: 'Ring gauge' },
       { type: 'p', text: 'Thickness is measured as a ring gauge, in sixty-fourths of an inch. A 64 ring gauge cigar is one inch across; a 52 ring gauge cigar is 52/64 of an inch, about 20.6 mm. Slim formats such as the lancero (around 38–40) give the wrapper a larger share of the smoke; wide formats such as the gordo (60 and above) smoke cooler and are often described as milder in character.' },
-      { type: 'h2', text: 'Parejos and figurados' },
-      { type: 'p', text: 'Most cigars are parejos: straight-sided, with a rounded head and an open foot. Figurados are shaped. A torpedo or pyramide tapers to a point at the head; a belicoso has a shorter taper; a perfecto tapers at both ends. Shaped cigars are harder to roll consistently, which is one reason they are less common.' },
-      { type: 'h2', text: 'The Empire Cigars formats' },
-      { type: 'p', text: 'Each Empire collection has a proposed vitola, from the 127 mm Napoleon Robusto to the 194 mm Imperator Double Corona. These are design concepts: they will be confirmed or changed once blends are developed with a manufacturer.' },
+      { type: 'h2', text: 'Parejos, figurados and box-pressed cigars' },
+      { type: 'p', text: 'Most cigars are parejos: straight-sided, with a rounded head and an open foot. Figurados are shaped. A torpedo or pyramide tapers to a point at the head; a belicoso has a shorter taper; a perfecto tapers at both ends; a salomón is a long figurado with a tapered head and a bulb above a closed, pointed foot. Shaped cigars are harder to roll consistently, which is one reason they are less common.' },
+      { type: 'p', text: 'A box-pressed cigar is pressed while it rests, giving it a softly squared cross-section instead of a round one. It sits flat, packs tightly in the box and is often said to burn a little more evenly because the filler is compacted.' },
+      { type: 'h2', text: 'The Heritage Cigars formats' },
+      { type: 'p', text: 'Each Empire collection has its own vitola, from the 127 mm Caesar Robusto and box-pressed Saadian Robusto to the 191 mm Napoleon Double Corona, Cyrus Lancero and Imperator Salomón. These formats are proposals until each blend is confirmed with its manufacturer.' },
     ],
     sources: [
       { label: 'Encyclopaedia Britannica — Cigar', href: 'https://www.britannica.com/topic/cigar' },
@@ -72,7 +73,7 @@ export const articles: Article[] = [
       { type: 'p', text: 'The binder is chosen for strength: it must hold the filler together and keep the cigar’s shape while it burns.' },
       { type: 'h2', text: 'Filler' },
       { type: 'p', text: 'Premium cigars generally use long filler — whole leaves running the length of the cigar — blended from different tobaccos and different positions on the plant to balance strength, flavour and burn.' },
-      { type: 'note', text: 'Empire Cigars has not yet confirmed the wrapper, binder, filler or origin of any of its blends. These details will be published only once verified with the manufacturer.' },
+      { type: 'note', text: 'Heritage Cigars blends tobaccos from several Latin American countries. The wrapper, binder and filler of each blend will be published once the blend is final.' },
     ],
     sources: [
       { label: 'Encyclopaedia Britannica — Cigar', href: 'https://www.britannica.com/topic/cigar' },
@@ -87,9 +88,9 @@ export const articles: Article[] = [
     status: 'draft',
     updated: '2026-10-17',
     body: [
-      { type: 'p', text: 'Premium cigar production is usually described in a sequence of stages. The details differ from one factory to another, and the description below is a general overview, not a description of Empire Cigars’ own production, which has not yet begun.' },
+      { type: 'p', text: 'Premium cigar production is usually described in a sequence of stages. The details differ from one factory to another, and the description below is a general overview, not a description of Heritage Cigars’ own production, which has not yet begun.' },
       { type: 'list', items: ['Growing and harvesting: leaves are picked from the plant in stages, as different positions mature.', 'Curing: harvested leaves are dried, typically in curing barns, as they change colour.', 'Fermentation: cured leaves are stacked and allowed to ferment, which develops flavour and reduces harshness.', 'Ageing and sorting: leaves are rested and graded by size, colour and quality.', 'Blending and rolling: filler leaves are combined, bunched with a binder and finished with a wrapper.', 'Resting and quality control: finished cigars are rested before banding, boxing and inspection.'] },
-      { type: 'note', text: 'We will describe Empire Cigars’ own process only after it is established and verified with our manufacturer.' },
+      { type: 'note', text: 'We will describe Heritage Cigars’ own process only after it is established and verified with our manufacturer.' },
     ],
     sources: [
       { label: 'Encyclopaedia Britannica — Cigar', href: 'https://www.britannica.com/topic/cigar' },
@@ -124,9 +125,9 @@ export const articles: Article[] = [
     body: [
       { type: 'p', text: 'The twelve collections span more than four thousand years and five continents: Egypt and Rome, Persia and the steppe, the Andes, the Ottoman and Mughal courts, Carolingian Europe, Russia, Napoleonic France and the Saadian dynasty of Morocco. The twelfth, Imperator, is the house’s own signature.' },
       { type: 'h2', text: 'Inspiration, not provenance' },
-      { type: 'p', text: 'The collections are named in tribute. They do not claim any connection to the places, peoples or rulers they evoke, and the tobacco in each will come from wherever our manufacturer sources it — which we will state plainly once confirmed.' },
+      { type: 'p', text: 'The collections are named in tribute. They do not claim any connection to the places, peoples or rulers they evoke; the tobacco in every collection comes from Latin America, and we will name the countries behind each blend once it is final.' },
       { type: 'h2', text: 'A note on symbols' },
-      { type: 'p', text: 'Each emblem was drawn for Empire Cigars. We used architectural and decorative motifs — a laurel, a tulip, a zellige star, a stepped terrace — and deliberately avoided religious symbols, sacred imagery and modern national emblems, which are not ours to put on a cigar band.' },
+      { type: 'p', text: 'Each emblem was drawn for Heritage Cigars from architectural and decorative motifs: a laurel, a tulip, a zellige star, a stepped terrace.' },
     ],
     sources: [],
   },
