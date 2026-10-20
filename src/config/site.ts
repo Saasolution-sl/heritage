@@ -14,7 +14,12 @@ export const site = {
     tobacco: 'Blends of tobaccos from several Latin American countries',
     manufacturing: 'Several partner manufacturers, matched to each blend',
   },
-  url: (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, ''),
+  // Set NEXT_PUBLIC_SITE_URL once the domain is live; on Vercel the project's
+  // production address is used until then.
+  url: (
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000')
+  ).replace(/\/$/, ''),
   contact: {
     email: null as string | null,
     phone: null as string | null,
